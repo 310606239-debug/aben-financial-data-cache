@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aben Data Cache Demo</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #10231e;
+      background: #f5f7f2;
+    }
+    body { margin: 0; padding: 32px; }
+    main { max-width: 920px; margin: 0 auto; }
+    h1 { font-size: clamp(34px, 6vw, 72px); line-height: .95; margin: 0 0 16px; letter-spacing: -.05em; }
+    p { color: #5f6e68; line-height: 1.6; }
+    .card { background: #fff; border: 1px solid #dfe8e1; border-radius: 24px; padding: 24px; box-shadow: 0 24px 60px rgba(15, 45, 34, .08); }
+    .controls { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 24px 0; }
+    label { display: grid; gap: 6px; font-size: 12px; color: #64736d; }
+    select, input, button { border: 1px solid #d5e1da; border-radius: 12px; padding: 12px; font: inherit; background: #fbfdf9; }
+    button { background: #0b6f52; color: #fff; border: 0; font-weight: 700; cursor: pointer; }
+    dl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; overflow: hidden; border: 1px solid #dfe8e1; border-radius: 18px; background: #dfe8e1; }
+    div.metric { background: #fff; padding: 16px; }
+    dt { font-size: 12px; color: #66736e; margin-bottom: 6px; }
+    dd { margin: 0; font-size: 20px; font-weight: 750; }
+    pre { white-space: pre-wrap; background: #10231e; color: #e9f4ed; border-radius: 18px; padding: 18px; overflow: auto; }
+    .ok { color: #0b6f52; }
+    .warn { color: #b45309; }
+    @media (max-width: 760px) {
+      body { padding: 18px; }
+      .controls, dl { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Financial data cache smoke test.</h1>
+    <p>这个 demo 直接读取 GitHub Raw JSON，用来验证缓存是否已经发布、SEC 年度数据是否进入缓存，并跑一个最小正向 DCF。</p>
+
+    <section class="card">
+      <div class="controls">
+        <label>股票
+          <select id="symbol">
+            <option>AAPL</option>
+            <option>MSFT</option>
+            <option>TSLA</option>
+            <option>NOW</option>
+          </select>
+        </label>
+        <label>FCF 增长率
+          <input id="growth" type="number" value="8" step="0.5">
+        </label>
+        <label>终值 P/FCF
+          <input id="multiple" type="number" value="25" step="1">
+        </label>
+        <label>折现率
+          <input id="discount" type="number" value="12" step="0.5">
+        </label>
+      </div>
+      <button id="run">读取缓存并计算</button>
+
+      <dl id="metrics" style="display:none"></dl>
+      <pre id="raw">等待测试...</pre>
+    </section>
+  </main>
+
+  <script>
+    const repo = "https://raw.githubusercontent.com/310606239-debug/aben-financial-data-cache/main";
+    const money = (value, currency) => new Intl.NumberFormat("zh-CN", {
+      style: "currency",
+      currency,
+      maximumFractionDigits: 2,
+    }).format(value);
+    const pct = (value) => `${(value * 100).toFixed(1)}%`;
+
+    async function loadAndCalculate() {
+      const symbol = document.getElementById("symbol").value;
+      const growth = Number(document.getElementById("growth").value) / 100;
+      const multiple = Number(document.getElementById("multiple").value);
+      const discount = Number(document.getElementById("discount").value) / 100;
+      const url = `${repo}/cache/dcf/${symbol}.json?t=${Date.now()}`;
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+
+      const base = data.valuation_bases.free_cash_flow.per_share;
+      const years = 10;
+      const fairValue = base * Math.pow(1 + growth, years) * multiple / Math.pow(1 + discount, years);
+      const gap = fairValue / data.market_data.price - 1;
+      const annualSources = [...new Set(data.annual.map((row) => row.source))];
+      const hasSec = data.sources.includes("sec-edgar") || annualSources.includes("sec-edgar");
+
+      const metrics = [
+        ["数据来源", data.sources.join(" + ")],
+        ["年度条数", `${data.annual.length} 年`],
+        ["SEC 状态", hasSec ? "已进入缓存" : "尚未进入缓存"],
+        ["5/10 年窗口", `${data.historical_metrics.available_growth_windows.free_cash_flow.join(", ") || "暂无"}`],
+        ["当前价格", money(data.market_data.price, data.currency)],
+        ["FCF/股", money(base, data.currency)],
+        ["估算内在价值", money(fairValue, data.currency)],
+        ["相对现价", pct(gap)],
+      ];
+
+      document.getElementById("metrics").innerHTML = metrics.map(([label, value]) => `
+        <div class="metric">
+          <dt>${label}</dt>
+          <dd class="${label === "SEC 状态" ? (hasSec ? "ok" : "warn") : ""}">${value}</dd>
+        </div>
+      `).join("");
+      document.getElementById("metrics").style.display = "grid";
+      document.getElementById("raw").textContent = JSON.stringify({
+        symbol: data.symbol,
+        fetched_at: data.fetched_at,
+        sources: data.sources,
+        annual_years: data.annual.map((row) => row.fiscal_year),
+        annual_sources: annualSources,
+        warnings: data.data_quality?.warnings || [],
+      }, null, 2);
+    }
+
+    document.getElementById("run").addEventListener("click", () => {
+      document.getElementById("raw").textContent = "读取中...";
+      loadAndCalculate().catch((error) => {
+        document.getElementById("raw").textContent = error.stack || String(error);
+      });
+    });
+    loadAndCalculate();
+  </script>
+</body>
+</html>
