@@ -95,7 +95,7 @@ def merge_sec_annual(
         )
         rows[year] = merged
 
-    return [rows[year] for year in sorted(rows, reverse=True)[:12]]
+    return [rows[year] for year in sorted(rows, reverse=True)]
 
 
 def refresh_payload(stock: Stock) -> dict[str, Any]:
