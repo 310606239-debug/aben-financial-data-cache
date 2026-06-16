@@ -88,7 +88,7 @@ def fetch_sec_annual(cik: str, timeout: int = 30) -> Optional[list[dict[str, Any
     )
 
     annual = []
-    for end in ends[:12]:
+    for end in ends:
         row = {"fiscal_year": end, "source": "sec-edgar"}
         for field, values in series.items():
             item = values.get(end)
