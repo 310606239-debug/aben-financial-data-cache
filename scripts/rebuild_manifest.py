@@ -25,6 +25,7 @@ def main() -> int:
                 payload["calculator_contract"]["forward_models"]
             ),
             "path": f"cache/dcf/{symbol}.json",
+            "history_path": f"cache/history/dcf/{symbol}/",
         }
 
     write_json_atomic(
