@@ -51,7 +51,7 @@ cache/dcf/<SYMBOL>.json
 
 - 当前价格、股本、市值、现金、债务和企业价值。
 - TTM Revenue、Net Income、Diluted EPS、Operating Cash Flow、CapEx 和 FCF。
-- 最多 12 年年度财务数据。
+- SEC/yfinance 可取得的年度财务数据，以及已入库的更早年度。
 - Revenue/share、FCF/share、净利率和现金转换率。
 - 1/3/5/10 年 Revenue、Earnings、FCF CAGR。
 - 1/3/5/10 年平均净利率、现金转换率、P/E 和 P/FCF。
@@ -72,6 +72,18 @@ cache/history/prices/<YYYY-MM-DD>.json
 - 每次财报快照被覆盖前，旧 JSON 会归档到 `cache/history/dcf/`。
 - 每日行情任务会写入轻量价格历史文件，长期形成自己的价格时间序列。
 - 年度财务数据按年份合并，新数据优先，但不会因为某次免费源少返回几年就删除旧年份。
+
+## 股本与每股指标口径
+
+- 当前 TTM 每股收入、每股 FCF：最近四个季度总额 ÷ 最新可取得股本。
+- 当前股本优先来自 yfinance 资产负债表里的普通股数/发行股数，缺失时回退到最近季度的
+  稀释或基本加权股数。
+- 每日价格刷新会尽量同步 yfinance fast_info 里的最新股本，并用它重算市值和企业价值。
+- 年度历史 Revenue/share、FCF/share：当年年度总额 ÷ 当年财报里的 diluted_shares。
+- EPS 优先使用财报披露的 diluted EPS；缺失时才用净利润 ÷ 股数估算。
+
+因此：当前估值基准反映“最新股本下的 TTM 经营能力”，历史增长率反映“各年度真实稀释后每股
+变化”。这能更好处理回购、增发、拆股和股权激励摊薄。
 
 ## 正向估值
 
