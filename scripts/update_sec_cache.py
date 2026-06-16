@@ -10,6 +10,7 @@ from core.cache import update_manifest, write_stock_cache
 from core.metrics import available_windows, historical_average, historical_growth, safe_ratio
 from core.sec_client import fetch_sec_annual
 from core.settings import DCF_CACHE_DIR, UNIVERSE_PATH
+from core.update_policy import UpdatePolicy, load_manifest_status, select_refresh_candidates
 from core.universe import Stock, load_universe
 
 
@@ -23,6 +24,21 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--shard-count", type=int, default=1)
     parser.add_argument("--skip-manifest", action="store_true")
     parser.add_argument("--allow-partial", action="store_true")
+    parser.add_argument(
+        "--stale-days",
+        type=int,
+        help="Only refresh SEC history for caches older than this many days.",
+    )
+    parser.add_argument(
+        "--missing-only",
+        action="store_true",
+        help="Only refresh SEC history for missing cache files.",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Refresh selected SEC histories even when cache is fresh.",
+    )
     return parser.parse_args()
 
 
@@ -44,6 +60,16 @@ def select_stocks(args: argparse.Namespace) -> list[Stock]:
 
     if args.shard_count <= 0 or not 0 <= args.shard_index < args.shard_count:
         raise ValueError("Invalid shard configuration")
+
+    stocks = select_refresh_candidates(
+        stocks,
+        UpdatePolicy(
+            force=args.force,
+            missing_only=args.missing_only,
+            stale_days=args.stale_days,
+        ),
+        load_manifest_status(),
+    )
 
     return [
         stock
