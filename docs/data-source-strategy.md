@@ -46,6 +46,24 @@ Each stock JSON publishes `historical_metrics.available_growth_windows`. The fro
 must only enable 1-, 3-, 5-, or 10-year controls when the corresponding window exists.
 Missing history stays unavailable rather than being estimated from unrelated data.
 
+## Share Count and Per-Share Metrics
+
+Share count is a first-class data field because DCF output is ultimately a per-share
+value.
+
+- Current TTM per-share bases use latest available shares outstanding:
+  `TTM revenue / current shares` and `TTM free cash flow / current shares`.
+- Historical annual per-share metrics use each fiscal year's diluted weighted average
+  shares where available, so buybacks, dilution, and issuance are reflected in the
+  historical trend.
+- Market cap and enterprise value are recalculated whenever price or current shares
+  change.
+- Annual diluted shares are retained by fiscal year and should not be overwritten by
+  a shorter upstream response.
+
+For the calculator UI, label current per-share fields as current bases, and label
+annual chart fields as historical diluted per-share metrics.
+
 ## Other Options
 
 - A licensed fundamentals API is the lowest-maintenance option for full global
