@@ -16,6 +16,11 @@ def parse_args() -> argparse.Namespace:
         default=1.0,
         help="Required fraction of universe files, from 0 to 1",
     )
+    parser.add_argument(
+        "--allow-missing-price",
+        action="store_true",
+        help="Do not fail validation when current price is missing",
+    )
     return parser.parse_args()
 
 
@@ -45,7 +50,10 @@ def main() -> int:
             payload = json.load(file)
         if payload.get("symbol") != stock.symbol:
             errors.append(f"{stock.symbol}: symbol mismatch")
-        if payload.get("market_data", {}).get("price") is None:
+        if (
+            payload.get("market_data", {}).get("price") is None
+            and not args.allow_missing_price
+        ):
             errors.append(f"{stock.symbol}: missing current price")
         if payload.get("market_data", {}).get("shares_outstanding") is None:
             errors.append(f"{stock.symbol}: missing shares outstanding")
