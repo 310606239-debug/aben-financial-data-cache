@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "aben-financial-data-cache-api",
+  "main": "src/index.js",
+  "compatibility_date": "2026-06-16",
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "REPO_RAW_BASE": "https://raw.githubusercontent.com/310606239-debug/aben-financial-data-cache/main"
+  }
+}

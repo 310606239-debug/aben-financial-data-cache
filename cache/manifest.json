@@ -1,0 +1,90 @@
+{
+  "schema_version": 3,
+  "generated_at": "2026-06-16T01:07:42.590514+00:00",
+  "stocks": {
+    "0700.HK": {
+      "status": "ok",
+      "fetched_at": "2026-06-15T06:39:00.421047+00:00",
+      "as_of": "2026-06-15",
+      "market": "HK",
+      "indexes": [
+        "hstech"
+      ],
+      "forward_models": [
+        "earnings_growth",
+        "fcf_growth",
+        "revenue_growth"
+      ],
+      "path": "cache/dcf/0700.HK.json"
+    },
+    "600519.SS": {
+      "status": "ok",
+      "fetched_at": "2026-06-15T06:39:06.723902+00:00",
+      "as_of": "2026-06-15",
+      "market": "CN",
+      "indexes": [
+        "csi300"
+      ],
+      "forward_models": [
+        "earnings_growth",
+        "fcf_growth",
+        "revenue_growth"
+      ],
+      "path": "cache/dcf/600519.SS.json"
+    },
+    "AAPL": {
+      "status": "error",
+      "fetched_at": "2026-06-15T06:58:47.115862+00:00",
+      "as_of": "2026-06-12",
+      "market": "US",
+      "indexes": [
+        "qqq",
+        "sp500"
+      ],
+      "forward_models": [
+        "earnings_growth",
+        "fcf_growth",
+        "revenue_growth"
+      ],
+      "path": "cache/dcf/AAPL.json",
+      "last_attempt_at": "2026-06-16T01:07:42.590278+00:00",
+      "error": "Failed to fetch AAPL after 3 attempts: Failed to perform, curl: (6) Could not resolve host: guce.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details."
+    },
+    "NOW": {
+      "status": "error",
+      "fetched_at": "2026-06-15T06:51:37.720791+00:00",
+      "as_of": "2026-06-12",
+      "market": "US",
+      "indexes": [
+        "sp500"
+      ],
+      "forward_models": [
+        "earnings_growth",
+        "fcf_growth",
+        "revenue_growth"
+      ],
+      "path": "cache/dcf/NOW.json",
+      "last_attempt_at": "2026-06-16T01:07:42.590508+00:00",
+      "error": "Failed to fetch NOW after 3 attempts: Failed to perform, curl: (6) Could not resolve host: guce.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details."
+    },
+    "TSLA": {
+      "status": "error",
+      "fetched_at": "2026-06-15T06:58:54.041679+00:00",
+      "as_of": "2026-06-12",
+      "market": "US",
+      "indexes": [
+        "qqq",
+        "sp500"
+      ],
+      "forward_models": [
+        "earnings_growth",
+        "fcf_growth",
+        "revenue_growth"
+      ],
+      "path": "cache/dcf/TSLA.json",
+      "last_attempt_at": "2026-06-16T01:07:42.590511+00:00",
+      "error": "Failed to fetch TSLA after 3 attempts: Failed to perform, curl: (6) Could not resolve host: guce.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details."
+    }
+  },
+  "source": "yfinance"
+}

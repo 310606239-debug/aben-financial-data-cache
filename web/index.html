@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aben Research 内在价值与 Reverse DCF 计算器"
+    />
+    <title>Aben Value Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Aben Value Lab">
+        <span class="brand-mark">A</span>
+        <span>
+          <strong>Aben Value Lab</strong>
+          <small>Intrinsic value, made legible.</small>
+        </span>
+      </a>
+      <nav class="header-nav" aria-label="主导航">
+        <button class="nav-item active">估值实验室</button>
+        <button class="nav-item">股票池</button>
+        <button class="nav-item">数据说明</button>
+      </nav>
+      <div class="status-pill"><span></span> 本地计算</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">DCF WORKBENCH</p>
+          <h1>
+            Use this free tool to uncover the market's implied growth expectations
+            for any stock. Data refreshes daily.
+          </h1>
+        </div>
+      </section>
+
+      <section class="company-toolbar card">
+        <div class="company-identity">
+          <div class="company-logo" id="companyLogo">A</div>
+          <div>
+            <p class="company-kicker" id="companyIndexes">QQQ · S&P 500</p>
+            <h2 id="companyName">Apple Inc.</h2>
+            <p><span id="companySymbol">AAPL</span> · <span id="companyExchange">US</span></p>
+          </div>
+        </div>
+        <label class="stock-picker">
+          <span>选择公司</span>
+          <select id="stockSelect">
+            <option value="AAPL">AAPL · Apple</option>
+            <option value="TSLA">TSLA · Tesla</option>
+            <option value="NOW">NOW · ServiceNow</option>
+            <option value="600519.SS">600519 · 贵州茅台</option>
+            <option value="0700.HK">0700 · 腾讯控股</option>
+          </select>
+        </label>
+        <div class="price-block">
+          <span>当前价格</span>
+          <strong id="currentPrice">$291.13</strong>
+          <small id="priceDate">截至 2026-06-12</small>
+        </div>
+      </section>
+
+      <section class="mode-row">
+        <div class="segmented" id="directionTabs">
+          <button class="active" data-direction="forward">正向估值</button>
+          <button data-direction="reverse">Reverse DCF</button>
+        </div>
+        <div class="model-tabs" id="modelTabs">
+          <button data-model="revenue">Revenue Growth</button>
+          <button data-model="earnings">Earnings Growth</button>
+          <button class="active" data-model="free_cash_flow">FCF Growth</button>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <article class="result-panel card">
+          <p class="section-label" id="resultLabel">估算内在价值</p>
+          <div class="hero-result">
+            <span id="resultCurrency">$</span><strong id="primaryResult">183.87</strong>
+          </div>
+          <div class="valuation-badge positive" id="valuationBadge">
+            <span>相对现价</span><strong id="valuationGap">-36.8%</strong>
+          </div>
+
+          <div class="result-grid">
+            <div><span>当前股价</span><strong id="resultCurrentPrice">$291.13</strong></div>
+            <div><span id="baseMetricLabel">当前 FCF/股</span><strong id="basePerShare">$8.81</strong></div>
+            <div><span>预测 IRR</span><strong id="forecastIrr">-4.5%</strong></div>
+          </div>
+
+          <div class="formula-note">
+            <span>计算逻辑</span>
+            <p id="formulaText">
+              FCF/share × 增长 × 终值 P/FCF，再以要求回报率折现。
+            </p>
+          </div>
+        </article>
+
+        <article class="assumptions card">
+          <div class="card-heading">
+            <div>
+              <p class="section-label">你的假设</p>
+              <h3 id="assumptionTitle">FCF 增长模型</h3>
+            </div>
+            <button class="reset-button" id="resetButton">重置</button>
+          </div>
+
+          <div class="period-control">
+            <span>预测周期</span>
+            <div class="mini-segment" id="periodTabs">
+              <button data-years="5">5 年</button>
+              <button class="active" data-years="10">10 年</button>
+            </div>
+          </div>
+
+          <label class="range-control" id="growthControl">
+            <div><span id="growthLabel">FCF 年增长率</span><output id="growthOutput">10.0%</output></div>
+            <input id="growthRate" type="range" min="-10" max="35" step="0.5" value="10" />
+            <div class="range-scale"><span>-10%</span><span>35%</span></div>
+          </label>
+
+          <label class="range-control hidden" id="marginControl">
+            <div><span>未来净利率</span><output id="marginOutput">25.0%</output></div>
+            <input id="netMargin" type="range" min="1" max="60" step="0.5" value="25" />
+            <div class="range-scale"><span>1%</span><span>60%</span></div>
+          </label>
+
+          <label class="range-control">
+            <div><span id="multipleLabel">终值 P/FCF</span><output id="multipleOutput">25×</output></div>
+            <input id="terminalMultiple" type="range" min="5" max="50" step="1" value="25" />
+            <div class="range-scale"><span>5×</span><span>50×</span></div>
+          </label>
+
+          <label class="range-control">
+            <div><span>要求回报率 / 折现率</span><output id="discountOutput">12.0%</output></div>
+            <input id="discountRate" type="range" min="5" max="25" step="0.5" value="12" />
+            <div class="range-scale"><span>5%</span><span>25%</span></div>
+          </label>
+        </article>
+
+        <article class="history-panel card">
+          <div class="card-heading">
+            <div>
+              <p class="section-label">历史参照</p>
+              <h3 id="historyTitle">Free Cash Flow</h3>
+            </div>
+            <span class="data-source" id="dataSource">YFINANCE</span>
+          </div>
+
+          <div class="growth-chips" id="growthChips"></div>
+          <div class="chart" id="historyChart" aria-label="历史指标图表"></div>
+
+          <div class="history-summary">
+            <div><span id="averageMetricLabel">平均 P/FCF</span><strong id="averageMetric">29.8×</strong></div>
+            <div><span>可用历史</span><strong id="availableHistory">3 年</strong></div>
+            <div><span>基准期间</span><strong id="basePeriod">TTM</strong></div>
+          </div>
+
+          <p class="data-warning" id="dataWarning">
+            当前免费源只提供 4 个完整财年；5 年和 10 年历史暂不推算。
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <span>Aben Research · 数据用于研究，不构成投资建议</span>
+      <span id="lastUpdated">数据更新于 2026-06-15</span>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
