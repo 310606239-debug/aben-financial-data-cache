@@ -5,6 +5,7 @@ import sys
 
 from core.cache import update_manifest, write_stock_cache
 from core.settings import UNIVERSE_PATH
+from core.update_policy import UpdatePolicy, load_manifest_status, select_refresh_candidates
 from core.universe import load_universe
 from core.yfinance_client import fetch_stock
 
@@ -33,6 +34,21 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Return success when some symbols fail after recording failures",
     )
+    parser.add_argument(
+        "--stale-days",
+        type=int,
+        help="Only refresh caches older than this many days.",
+    )
+    parser.add_argument(
+        "--missing-only",
+        action="store_true",
+        help="Only create caches that do not already exist.",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Refresh selected stocks even when cache is fresh.",
+    )
     return parser.parse_args()
 
 
@@ -57,6 +73,22 @@ def main() -> int:
     if args.shard_count <= 0 or not 0 <= args.shard_index < args.shard_count:
         print("Invalid shard configuration", file=sys.stderr)
         return 2
+
+    before_policy = len(stocks)
+    stocks = select_refresh_candidates(
+        stocks,
+        UpdatePolicy(
+            force=args.force,
+            missing_only=args.missing_only,
+            stale_days=args.stale_days,
+        ),
+        load_manifest_status(),
+    )
+    print(
+        f"Selected {len(stocks)} of {before_policy} stock(s) "
+        "after cache freshness filtering."
+    )
+
     stocks = [
         stock
         for position, stock in enumerate(sorted(stocks, key=lambda item: item.symbol))
