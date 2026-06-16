@@ -1,0 +1,198 @@
+{
+  "schema_version": 3,
+  "symbol": "FDXF",
+  "name": "FedEx Freight",
+  "exchange": "US",
+  "currency": "USD",
+  "market": "US",
+  "indexes": [
+    "sp500"
+  ],
+  "sources": [
+    "yfinance"
+  ],
+  "fetched_at": "2026-06-16T05:00:39.845589+00:00",
+  "market_data": {
+    "as_of": "2026-06-15",
+    "price": null,
+    "shares_outstanding": 148906159,
+    "market_cap": null,
+    "cash_and_short_term_investments": 92000000,
+    "total_debt": 1582000000,
+    "enterprise_value": null
+  },
+  "ttm": {
+    "revenue": null,
+    "net_income": null,
+    "diluted_eps": null,
+    "free_cash_flow": null,
+    "operating_cash_flow": null,
+    "capital_expenditure": null,
+    "revenue_per_share": null,
+    "free_cash_flow_per_share": null,
+    "net_margin": null,
+    "cash_conversion": null
+  },
+  "valuation_bases": {
+    "revenue": {
+      "value": 8887000000,
+      "period": "2025-05-31",
+      "per_share": 59.68188327253811
+    },
+    "earnings": {
+      "value": 1079000000,
+      "period": "2025-05-31",
+      "per_share": 7.246174417809004
+    },
+    "free_cash_flow": {
+      "value": 1094000000,
+      "period": "2025-05-31",
+      "per_share": 7.346909001930538
+    }
+  },
+  "annual": [
+    {
+      "fiscal_year": "2025-05-31",
+      "source": "yfinance",
+      "revenue": 8887000000,
+      "net_income": 1079000000,
+      "diluted_eps": 7.246174,
+      "diluted_shares": 148906159,
+      "operating_cash_flow": 1531000000,
+      "capital_expenditure": -437000000,
+      "free_cash_flow": 1094000000,
+      "revenue_per_share": 59.68188327253811,
+      "free_cash_flow_per_share": 7.346909001930538,
+      "net_margin": 0.12141330032631935,
+      "cash_conversion": 1.0139017608897127,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    },
+    {
+      "fiscal_year": "2024-05-31",
+      "source": "yfinance",
+      "revenue": 9424000000,
+      "net_income": 1574000000,
+      "diluted_eps": 10.570416,
+      "diluted_shares": 148906159,
+      "operating_cash_flow": 1541000000,
+      "capital_expenditure": -461000000,
+      "free_cash_flow": 1080000000,
+      "revenue_per_share": 63.28818138408902,
+      "free_cash_flow_per_share": 7.25289005675044,
+      "net_margin": 0.16702037351443125,
+      "cash_conversion": 0.6861499364675985,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    },
+    {
+      "fiscal_year": "2023-05-31",
+      "source": "yfinance",
+      "revenue": 10084000000,
+      "net_income": 1581000000,
+      "diluted_eps": 10.617425,
+      "diluted_shares": 148906159,
+      "operating_cash_flow": 1752000000,
+      "capital_expenditure": -558000000,
+      "free_cash_flow": 1194000000,
+      "revenue_per_share": 67.72050308543652,
+      "free_cash_flow_per_share": 8.018472896074098,
+      "net_margin": 0.15678302261007537,
+      "cash_conversion": 0.7552182163187856,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    }
+  ],
+  "historical_metrics": {
+    "available_growth_windows": {
+      "revenue": [
+        1
+      ],
+      "earnings": [
+        1
+      ],
+      "free_cash_flow": [
+        1
+      ]
+    },
+    "growth": {
+      "revenue": {
+        "1y": -0.05698217317487264,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "earnings": {
+        "1y": -0.3144853875476493,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "free_cash_flow": {
+        "1y": 0.012962962962963065,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    },
+    "averages": {
+      "net_margin": {
+        "1y": 0.12141330032631935,
+        "3y": 0.14840556548360864,
+        "5y": null,
+        "10y": null
+      },
+      "cash_conversion": {
+        "1y": 1.0139017608897127,
+        "3y": 0.8184233045586989,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_earnings": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_fcf": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    }
+  },
+  "calculator_contract": {
+    "forward_models": {
+      "revenue_growth": {
+        "base": "valuation_bases.revenue.per_share",
+        "margin": "user_input.net_margin",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "earnings_growth": {
+        "base": "valuation_bases.earnings.per_share",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "fcf_growth": {
+        "base": "valuation_bases.free_cash_flow.per_share",
+        "terminal_multiple": "user_input.terminal_price_to_fcf"
+      }
+    },
+    "common_user_inputs": [
+      "projection_years",
+      "growth_rate",
+      "discount_rate"
+    ],
+    "forward_output": "fair_value_per_share",
+    "reverse_output": "implied_compound_growth_rate"
+  },
+  "data_quality": {
+    "warnings": [
+      "SEC_USER_AGENT is not configured; using yfinance financials",
+      "fewer than 5 annual financial periods are available"
+    ]
+  }
+}

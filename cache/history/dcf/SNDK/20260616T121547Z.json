@@ -1,0 +1,202 @@
+{
+  "schema_version": 3,
+  "symbol": "SNDK",
+  "name": "Sandisk",
+  "exchange": "US",
+  "currency": "USD",
+  "market": "US",
+  "indexes": [
+    "qqq",
+    "sp500"
+  ],
+  "sources": [
+    "sec-edgar",
+    "yfinance"
+  ],
+  "fetched_at": "2026-06-16T12:15:34.504926+00:00",
+  "market_data": {
+    "as_of": "2026-06-15",
+    "price": null,
+    "shares_outstanding": 148000000,
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-06-16T12:15:34.504946+00:00",
+    "market_cap": null,
+    "cash_and_short_term_investments": 3735000000,
+    "total_debt": 182000000,
+    "enterprise_value": null
+  },
+  "ttm": {
+    "revenue": 13184000000,
+    "net_income": 4507000000,
+    "diluted_eps": 28.77,
+    "free_cash_flow": 4460000000,
+    "operating_cash_flow": 4639000000,
+    "capital_expenditure": -179000000,
+    "revenue_per_share": 89.08108108108108,
+    "free_cash_flow_per_share": 30.135135135135137,
+    "net_margin": 0.34185376213592233,
+    "cash_conversion": 0.9895717772354116
+  },
+  "valuation_bases": {
+    "revenue": {
+      "value": 13184000000,
+      "period": "ttm",
+      "per_share": 89.08108108108108
+    },
+    "earnings": {
+      "value": 4507000000,
+      "period": "ttm",
+      "per_share": 28.77
+    },
+    "free_cash_flow": {
+      "value": 4460000000,
+      "period": "ttm",
+      "per_share": 30.135135135135137
+    }
+  },
+  "annual": [
+    {
+      "fiscal_year": "2025-06-27",
+      "source": "sec-edgar",
+      "revenue": 7355000000,
+      "net_income": -1641000000,
+      "diluted_eps": -11.32,
+      "diluted_shares": 145000000,
+      "operating_cash_flow": 84000000,
+      "capital_expenditure": -204000000,
+      "free_cash_flow": -120000000,
+      "revenue_per_share": 50.724137931034484,
+      "free_cash_flow_per_share": -0.8275862068965517,
+      "net_margin": -0.22311352821210062,
+      "cash_conversion": 0.07312614259597806,
+      "year_end_price": 47.150001525878906,
+      "price_to_earnings": -4.165194481084709,
+      "price_to_fcf": -56.97291851043701
+    },
+    {
+      "fiscal_year": "2024-06-28",
+      "source": "sec-edgar",
+      "revenue": 6663000000,
+      "net_income": -672000000,
+      "diluted_eps": -4.63,
+      "diluted_shares": 145000000,
+      "operating_cash_flow": -309000000,
+      "capital_expenditure": -166000000,
+      "free_cash_flow": -475000000,
+      "revenue_per_share": 45.95172413793104,
+      "free_cash_flow_per_share": -3.2758620689655173,
+      "net_margin": -0.10085547050877983,
+      "cash_conversion": 0.7068452380952381,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    },
+    {
+      "fiscal_year": "2023-06-30",
+      "source": "sec-edgar",
+      "revenue": 6086000000,
+      "net_income": -2143000000,
+      "diluted_eps": -14.78,
+      "diluted_shares": 145000000,
+      "operating_cash_flow": -713000000,
+      "capital_expenditure": -219000000,
+      "free_cash_flow": -932000000,
+      "revenue_per_share": 41.97241379310345,
+      "free_cash_flow_per_share": -6.427586206896552,
+      "net_margin": -0.3521196187972396,
+      "cash_conversion": 0.4349043397106859,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    }
+  ],
+  "historical_metrics": {
+    "available_growth_windows": {
+      "revenue": [
+        1
+      ],
+      "earnings": [
+        1
+      ],
+      "free_cash_flow": [
+        1
+      ]
+    },
+    "growth": {
+      "revenue": {
+        "1y": 0.10385712141677916,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "earnings": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "free_cash_flow": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    },
+    "averages": {
+      "net_margin": {
+        "1y": -0.22311352821210062,
+        "3y": -0.22536287250604,
+        "5y": null,
+        "10y": null
+      },
+      "cash_conversion": {
+        "1y": 0.07312614259597806,
+        "3y": 0.4049585734673007,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_earnings": {
+        "1y": -4.165194481084709,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_fcf": {
+        "1y": -56.97291851043701,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    }
+  },
+  "calculator_contract": {
+    "forward_models": {
+      "revenue_growth": {
+        "base": "valuation_bases.revenue.per_share",
+        "margin": "user_input.net_margin",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "earnings_growth": {
+        "base": "valuation_bases.earnings.per_share",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "fcf_growth": {
+        "base": "valuation_bases.free_cash_flow.per_share",
+        "terminal_multiple": "user_input.terminal_price_to_fcf"
+      }
+    },
+    "common_user_inputs": [
+      "projection_years",
+      "growth_rate",
+      "discount_rate"
+    ],
+    "forward_output": "fair_value_per_share",
+    "reverse_output": "implied_compound_growth_rate"
+  },
+  "data_quality": {
+    "warnings": [
+      "fewer than 5 annual financial periods are available"
+    ]
+  }
+}

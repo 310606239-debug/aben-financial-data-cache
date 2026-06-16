@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-06-16T04:56:48.036538+00:00",
+  "generated_at": "2026-06-16T12:10:27.224907+00:00",
   "indexes": [
     {
       "id": "sp500",
@@ -16,6 +16,11 @@
       "id": "csi300",
       "name": "CSI 300",
       "constituent_count": 300
+    },
+    {
+      "id": "chinext",
+      "name": "ChiNext Index",
+      "constituent_count": 100
     },
     {
       "id": "hstech",
@@ -1230,6 +1235,62 @@
       "enabled": true
     },
     {
+      "symbol": "300001.SZ",
+      "source_symbol": "300001",
+      "name": "特锐德",
+      "local_name": "特锐德",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300002.SZ",
+      "source_symbol": "300002",
+      "name": "神州泰岳",
+      "local_name": "神州泰岳",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300003.SZ",
+      "source_symbol": "300003",
+      "name": "乐普医疗",
+      "local_name": "乐普医疗",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "医药卫生",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300012.SZ",
+      "source_symbol": "300012",
+      "name": "华测检测",
+      "local_name": "华测检测",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
       "symbol": "300014.SZ",
       "source_symbol": "300014",
       "name": "Eve Energy Co Ltd",
@@ -1238,9 +1299,11 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
       ],
-      "enabled": true
+      "enabled": true,
+      "sector": "工业"
     },
     {
       "symbol": "300015.SZ",
@@ -1251,7 +1314,37 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "医药卫生"
+    },
+    {
+      "symbol": "300017.SZ",
+      "source_symbol": "300017",
+      "name": "网宿科技",
+      "local_name": "网宿科技",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300024.SZ",
+      "source_symbol": "300024",
+      "name": "机器人",
+      "local_name": "机器人",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1264,7 +1357,51 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "信息技术"
+    },
+    {
+      "symbol": "300037.SZ",
+      "source_symbol": "300037",
+      "name": "新宙邦",
+      "local_name": "新宙邦",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300054.SZ",
+      "source_symbol": "300054",
+      "name": "鼎龙股份",
+      "local_name": "鼎龙股份",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300058.SZ",
+      "source_symbol": "300058",
+      "name": "蓝色光标",
+      "local_name": "蓝色光标",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "可选消费",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1277,7 +1414,37 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "金融"
+    },
+    {
+      "symbol": "300073.SZ",
+      "source_symbol": "300073",
+      "name": "当升科技",
+      "local_name": "当升科技",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300115.SZ",
+      "source_symbol": "300115",
+      "name": "长盈精密",
+      "local_name": "长盈精密",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1290,9 +1457,11 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
       ],
-      "enabled": true
+      "enabled": true,
+      "sector": "医药卫生"
     },
     {
       "symbol": "300124.SZ",
@@ -1303,7 +1472,65 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "工业"
+    },
+    {
+      "symbol": "300136.SZ",
+      "source_symbol": "300136",
+      "name": "信维通信",
+      "local_name": "信维通信",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "电信业务",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300144.SZ",
+      "source_symbol": "300144",
+      "name": "宋城演艺",
+      "local_name": "宋城演艺",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "可选消费",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300207.SZ",
+      "source_symbol": "300207",
+      "name": "欣旺达",
+      "local_name": "欣旺达",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300223.SZ",
+      "source_symbol": "300223",
+      "name": "北京君正",
+      "local_name": "北京君正",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1316,7 +1543,37 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "可选消费"
+    },
+    {
+      "symbol": "300253.SZ",
+      "source_symbol": "300253",
+      "name": "卫宁健康",
+      "local_name": "卫宁健康",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300255.SZ",
+      "source_symbol": "300255",
+      "name": "常山药业",
+      "local_name": "常山药业",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "医药卫生",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1329,7 +1586,23 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "工业"
+    },
+    {
+      "symbol": "300285.SZ",
+      "source_symbol": "300285",
+      "name": "国瓷材料",
+      "local_name": "国瓷材料",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "原材料",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1342,9 +1615,11 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
       ],
-      "enabled": true
+      "enabled": true,
+      "sector": "电信业务"
     },
     {
       "symbol": "300316.SZ",
@@ -1355,7 +1630,93 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "工业"
+    },
+    {
+      "symbol": "300339.SZ",
+      "source_symbol": "300339",
+      "name": "润和软件",
+      "local_name": "润和软件",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300346.SZ",
+      "source_symbol": "300346",
+      "name": "南大光电",
+      "local_name": "南大光电",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300347.SZ",
+      "source_symbol": "300347",
+      "name": "泰格医药",
+      "local_name": "泰格医药",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "医药卫生",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300373.SZ",
+      "source_symbol": "300373",
+      "name": "扬杰科技",
+      "local_name": "扬杰科技",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300383.SZ",
+      "source_symbol": "300383",
+      "name": "光环新网",
+      "local_name": "光环新网",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300390.SZ",
+      "source_symbol": "300390",
+      "name": "天华新能",
+      "local_name": "天华新能",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1368,7 +1729,23 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "电信业务"
+    },
+    {
+      "symbol": "300395.SZ",
+      "source_symbol": "300395",
+      "name": "菲利华",
+      "local_name": "菲利华",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "原材料",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1381,9 +1758,11 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
       ],
-      "enabled": true
+      "enabled": true,
+      "sector": "信息技术"
     },
     {
       "symbol": "300413.SZ",
@@ -1394,9 +1773,11 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
       ],
-      "enabled": true
+      "enabled": true,
+      "sector": "可选消费"
     },
     {
       "symbol": "300418.SZ",
@@ -1407,7 +1788,23 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "信息技术"
+    },
+    {
+      "symbol": "300432.SZ",
+      "source_symbol": "300432",
+      "name": "富临精工",
+      "local_name": "富临精工",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "可选消费",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1420,9 +1817,11 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
       ],
-      "enabled": true
+      "enabled": true,
+      "sector": "信息技术"
     },
     {
       "symbol": "300442.SZ",
@@ -1433,9 +1832,11 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
       ],
-      "enabled": true
+      "enabled": true,
+      "sector": "信息技术"
     },
     {
       "symbol": "300450.SZ",
@@ -1446,7 +1847,65 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "工业"
+    },
+    {
+      "symbol": "300454.SZ",
+      "source_symbol": "300454",
+      "name": "深信服",
+      "local_name": "深信服",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300458.SZ",
+      "source_symbol": "300458",
+      "name": "全志科技",
+      "local_name": "全志科技",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300474.SZ",
+      "source_symbol": "300474",
+      "name": "景嘉微",
+      "local_name": "景嘉微",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300475.SZ",
+      "source_symbol": "300475",
+      "name": "香农芯创",
+      "local_name": "香农芯创",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1459,7 +1918,37 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "信息技术"
+    },
+    {
+      "symbol": "300487.SZ",
+      "source_symbol": "300487",
+      "name": "蓝晓科技",
+      "local_name": "蓝晓科技",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "原材料",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300496.SZ",
+      "source_symbol": "300496",
+      "name": "中科创达",
+      "local_name": "中科创达",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1472,9 +1961,11 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
       ],
-      "enabled": true
+      "enabled": true,
+      "sector": "主要消费"
     },
     {
       "symbol": "300502.SZ",
@@ -1485,7 +1976,79 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "电信业务"
+    },
+    {
+      "symbol": "300548.SZ",
+      "source_symbol": "300548",
+      "name": "长芯博创",
+      "local_name": "长芯博创",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "电信业务",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300567.SZ",
+      "source_symbol": "300567",
+      "name": "精测电子",
+      "local_name": "精测电子",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300604.SZ",
+      "source_symbol": "300604",
+      "name": "长川科技",
+      "local_name": "长川科技",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300620.SZ",
+      "source_symbol": "300620",
+      "name": "光库科技",
+      "local_name": "光库科技",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "电信业务",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300627.SZ",
+      "source_symbol": "300627",
+      "name": "华测导航",
+      "local_name": "华测导航",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "电信业务",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1498,9 +2061,11 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
       ],
-      "enabled": true
+      "enabled": true,
+      "sector": "电信业务"
     },
     {
       "symbol": "300661.SZ",
@@ -1511,7 +2076,107 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "信息技术"
+    },
+    {
+      "symbol": "300666.SZ",
+      "source_symbol": "300666",
+      "name": "江丰电子",
+      "local_name": "江丰电子",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300672.SZ",
+      "source_symbol": "300672",
+      "name": "国科微",
+      "local_name": "国科微",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300677.SZ",
+      "source_symbol": "300677",
+      "name": "英科医疗",
+      "local_name": "英科医疗",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "医药卫生",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300699.SZ",
+      "source_symbol": "300699",
+      "name": "光威复材",
+      "local_name": "光威复材",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "原材料",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300718.SZ",
+      "source_symbol": "300718",
+      "name": "长盛轴承",
+      "local_name": "长盛轴承",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300724.SZ",
+      "source_symbol": "300724",
+      "name": "捷佳伟创",
+      "local_name": "捷佳伟创",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300748.SZ",
+      "source_symbol": "300748",
+      "name": "金力永磁",
+      "local_name": "金力永磁",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "原材料",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1524,7 +2189,51 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "工业"
+    },
+    {
+      "symbol": "300751.SZ",
+      "source_symbol": "300751",
+      "name": "迈为股份",
+      "local_name": "迈为股份",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300757.SZ",
+      "source_symbol": "300757",
+      "name": "罗博特科",
+      "local_name": "罗博特科",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300759.SZ",
+      "source_symbol": "300759",
+      "name": "康龙化成",
+      "local_name": "康龙化成",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "医药卫生",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1537,7 +2246,51 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "医药卫生"
+    },
+    {
+      "symbol": "300763.SZ",
+      "source_symbol": "300763",
+      "name": "锦浪科技",
+      "local_name": "锦浪科技",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300765.SZ",
+      "source_symbol": "300765",
+      "name": "新诺威",
+      "local_name": "新诺威",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "主要消费",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300782.SZ",
+      "source_symbol": "300782",
+      "name": "卓胜微",
+      "local_name": "卓胜微",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1550,9 +2303,11 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
       ],
-      "enabled": true
+      "enabled": true,
+      "sector": "信息技术"
     },
     {
       "symbol": "300832.SZ",
@@ -1563,7 +2318,23 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "医药卫生"
+    },
+    {
+      "symbol": "300857.SZ",
+      "source_symbol": "300857",
+      "name": "协创数据",
+      "local_name": "协创数据",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1576,7 +2347,23 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "信息技术"
+    },
+    {
+      "symbol": "300888.SZ",
+      "source_symbol": "300888",
+      "name": "稳健医疗",
+      "local_name": "稳健医疗",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "可选消费",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1589,7 +2376,65 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "医药卫生"
+    },
+    {
+      "symbol": "300919.SZ",
+      "source_symbol": "300919",
+      "name": "中伟新材",
+      "local_name": "中伟新材",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300953.SZ",
+      "source_symbol": "300953",
+      "name": "震裕科技",
+      "local_name": "震裕科技",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300972.SZ",
+      "source_symbol": "300972",
+      "name": "万辰集团",
+      "local_name": "万辰集团",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "主要消费",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "300979.SZ",
+      "source_symbol": "300979",
+      "name": "华利集团",
+      "local_name": "华利集团",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "可选消费",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1602,9 +2447,11 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
       ],
-      "enabled": true
+      "enabled": true,
+      "sector": "主要消费"
     },
     {
       "symbol": "301165.SZ",
@@ -1615,7 +2462,37 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "电信业务"
+    },
+    {
+      "symbol": "301200.SZ",
+      "source_symbol": "301200",
+      "name": "大族数控",
+      "local_name": "大族数控",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "301217.SZ",
+      "source_symbol": "301217",
+      "name": "铜冠铜箔",
+      "local_name": "铜冠铜箔",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1628,9 +2505,11 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
       ],
-      "enabled": true
+      "enabled": true,
+      "sector": "信息技术"
     },
     {
       "symbol": "301269.SZ",
@@ -1641,7 +2520,23 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "信息技术"
+    },
+    {
+      "symbol": "301301.SZ",
+      "source_symbol": "301301",
+      "name": "川宁生物",
+      "local_name": "川宁生物",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "医药卫生",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1654,7 +2549,107 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
+      ],
+      "enabled": true,
+      "sector": "信息技术"
+    },
+    {
+      "symbol": "301358.SZ",
+      "source_symbol": "301358",
+      "name": "湖南裕能",
+      "local_name": "湖南裕能",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "301377.SZ",
+      "source_symbol": "301377",
+      "name": "鼎泰高科",
+      "local_name": "鼎泰高科",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "工业",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "301498.SZ",
+      "source_symbol": "301498",
+      "name": "乖宝宠物",
+      "local_name": "乖宝宠物",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "主要消费",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "301526.SZ",
+      "source_symbol": "301526",
+      "name": "国际复材",
+      "local_name": "国际复材",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "原材料",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "301536.SZ",
+      "source_symbol": "301536",
+      "name": "星宸科技",
+      "local_name": "星宸科技",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "301550.SZ",
+      "source_symbol": "301550",
+      "name": "斯菱智驱",
+      "local_name": "斯菱智驱",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "可选消费",
+      "indexes": [
+        "chinext"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "301611.SZ",
+      "source_symbol": "301611",
+      "name": "珂玛科技",
+      "local_name": "珂玛科技",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "market": "CN",
+      "sector": "信息技术",
+      "indexes": [
+        "chinext"
       ],
       "enabled": true
     },
@@ -1667,9 +2662,11 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "chinext",
         "csi300"
       ],
-      "enabled": true
+      "enabled": true,
+      "sector": "工业"
     },
     {
       "symbol": "3690.HK",

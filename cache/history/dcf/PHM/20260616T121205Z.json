@@ -1,0 +1,469 @@
+{
+  "schema_version": 3,
+  "symbol": "PHM",
+  "name": "PulteGroup",
+  "exchange": "US",
+  "currency": "USD",
+  "market": "US",
+  "indexes": [
+    "sp500"
+  ],
+  "sources": [
+    "sec-edgar",
+    "yfinance"
+  ],
+  "fetched_at": "2026-06-16T12:11:52.041514+00:00",
+  "market_data": {
+    "as_of": "2026-06-15",
+    "price": null,
+    "shares_outstanding": 190771000,
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-06-16T12:11:52.041530+00:00",
+    "market_cap": null,
+    "cash_and_short_term_investments": 2316290000,
+    "total_debt": 2275823000,
+    "enterprise_value": null
+  },
+  "ttm": {
+    "revenue": 16827874000,
+    "net_income": 2042928000,
+    "diluted_eps": 10.34,
+    "free_cash_flow": 1778266000,
+    "operating_cash_flow": 1896772000,
+    "capital_expenditure": -118506000,
+    "revenue_per_share": 88.20981176384251,
+    "free_cash_flow_per_share": 9.321469196051812,
+    "net_margin": 0.12140143193370713,
+    "cash_conversion": 0.8704496683191968
+  },
+  "valuation_bases": {
+    "revenue": {
+      "value": 16827874000,
+      "period": "ttm",
+      "per_share": 88.20981176384251
+    },
+    "earnings": {
+      "value": 2042928000,
+      "period": "ttm",
+      "per_share": 10.34
+    },
+    "free_cash_flow": {
+      "value": 1778266000,
+      "period": "ttm",
+      "per_share": 9.321469196051812
+    }
+  },
+  "annual": [
+    {
+      "fiscal_year": "2025-12-31",
+      "source": "sec-edgar",
+      "revenue": 17311953000,
+      "net_income": 2218730000,
+      "diluted_eps": 11.12,
+      "diluted_shares": 199537000,
+      "operating_cash_flow": 1871249000,
+      "capital_expenditure": -122716000,
+      "free_cash_flow": 1748533000,
+      "revenue_per_share": 86.76061582563635,
+      "free_cash_flow_per_share": 8.762951232102317,
+      "net_margin": 0.12816173888642143,
+      "cash_conversion": 0.7880783150721359,
+      "year_end_price": 117.26000213623047,
+      "price_to_earnings": 10.544964220884035,
+      "price_to_fcf": 13.381336838513782
+    },
+    {
+      "fiscal_year": "2024-12-31",
+      "source": "sec-edgar",
+      "revenue": 17946950000,
+      "net_income": 3083262000,
+      "diluted_eps": 14.69,
+      "diluted_shares": 209829000,
+      "operating_cash_flow": 1680794000,
+      "capital_expenditure": -118545000,
+      "free_cash_flow": 1562249000,
+      "revenue_per_share": 85.53131359344991,
+      "free_cash_flow_per_share": 7.445343589303671,
+      "net_margin": 0.17179866216822356,
+      "cash_conversion": 0.5066870736252709,
+      "year_end_price": 108.9000015258789,
+      "price_to_earnings": 7.413206366635732,
+      "price_to_fcf": 14.626591804618627
+    },
+    {
+      "fiscal_year": "2023-12-31",
+      "source": "sec-edgar",
+      "revenue": 16061578000,
+      "net_income": 2602372000,
+      "diluted_eps": 11.72,
+      "diluted_shares": 221163000,
+      "operating_cash_flow": 2196762000,
+      "capital_expenditure": -92201000,
+      "free_cash_flow": 2104561000,
+      "revenue_per_share": 72.62325976768265,
+      "free_cash_flow_per_share": 9.51588195132097,
+      "net_margin": 0.1620246777745001,
+      "cash_conversion": 0.8087087472505853,
+      "year_end_price": 103.22000122070312,
+      "price_to_earnings": 8.807167339650437,
+      "price_to_fcf": 10.847129225512763
+    },
+    {
+      "fiscal_year": "2022-12-31",
+      "source": "sec-edgar",
+      "revenue": 16002979000,
+      "net_income": 2617317000,
+      "diluted_eps": 11.01,
+      "diluted_shares": 236166000,
+      "operating_cash_flow": 668466000,
+      "capital_expenditure": -112661000,
+      "free_cash_flow": 555805000,
+      "revenue_per_share": 67.76157025143331,
+      "free_cash_flow_per_share": 2.3534505390276332,
+      "net_margin": 0.1635518611878451,
+      "cash_conversion": 0.21235677604203082,
+      "year_end_price": 45.529998779296875,
+      "price_to_earnings": 4.135331405930688,
+      "price_to_fcf": 19.346061463483462
+    },
+    {
+      "fiscal_year": "2021-12-31",
+      "source": "sec-edgar",
+      "revenue": 13736995000,
+      "net_income": 1946320000,
+      "operating_cash_flow": 1004021000,
+      "capital_expenditure": -72781000,
+      "diluted_eps": 7.43,
+      "diluted_shares": 259928000,
+      "free_cash_flow": 931240000,
+      "revenue_per_share": 52.849231325597856,
+      "free_cash_flow_per_share": 3.5826844356898833,
+      "net_margin": 0.14168455328112153,
+      "cash_conversion": 0.4784619178757861,
+      "year_end_price": 57.15999984741211,
+      "price_to_earnings": 7.693135914860311,
+      "price_to_fcf": 15.954517031418469
+    },
+    {
+      "fiscal_year": "2020-03-31",
+      "source": "sec-edgar",
+      "revenue": 11036082000,
+      "net_income": 203711000,
+      "operating_cash_flow": 1784342000,
+      "capital_expenditure": -58354000,
+      "diluted_eps": 0.74,
+      "diluted_shares": 271218000,
+      "free_cash_flow": 1725988000,
+      "revenue_per_share": 40.69081698117382,
+      "free_cash_flow_per_share": 6.363840158101601,
+      "net_margin": 0.018458634142080495,
+      "cash_conversion": 8.472728522269293,
+      "year_end_price": 22.31999969482422,
+      "price_to_earnings": 30.162161749762458,
+      "price_to_fcf": 3.5073162022162583
+    },
+    {
+      "fiscal_year": "2019-03-31",
+      "source": "sec-edgar",
+      "revenue": 10212957000,
+      "net_income": 166757000,
+      "operating_cash_flow": 1076002000,
+      "capital_expenditure": -58119000,
+      "diluted_eps": 0.59,
+      "diluted_shares": 278640000,
+      "free_cash_flow": 1017883000,
+      "revenue_per_share": 36.652874677002586,
+      "free_cash_flow_per_share": 3.653039764570772,
+      "net_margin": 0.016327984147979865,
+      "cash_conversion": 6.103989637616412,
+      "year_end_price": 27.959999084472656,
+      "price_to_earnings": 47.38982895673332,
+      "price_to_fcf": 7.6538994608392725
+    },
+    {
+      "fiscal_year": "2018-03-31",
+      "source": "sec-edgar",
+      "revenue": 10188331000,
+      "net_income": 170751000,
+      "operating_cash_flow": 1448280000,
+      "capital_expenditure": -59039000,
+      "diluted_eps": 0.59,
+      "diluted_shares": 288026000,
+      "free_cash_flow": 1389241000,
+      "revenue_per_share": 35.372955913702235,
+      "free_cash_flow_per_share": 4.823318033788616,
+      "net_margin": 0.016759467276828758,
+      "cash_conversion": 8.136063624810397,
+      "year_end_price": 29.489999771118164,
+      "price_to_earnings": 49.98305045952232,
+      "price_to_fcf": 6.1140483717915615
+    },
+    {
+      "fiscal_year": "2017-03-31",
+      "source": "sec-edgar",
+      "revenue": 8577686000,
+      "net_income": 91518000,
+      "operating_cash_flow": 663080000,
+      "capital_expenditure": -32051000,
+      "diluted_eps": 0.28,
+      "diluted_shares": 320085000,
+      "free_cash_flow": 631029000,
+      "revenue_per_share": 26.798150491275756,
+      "free_cash_flow_per_share": 1.9714419607291813,
+      "net_margin": 0.010669311047291775,
+      "cash_conversion": 6.895135383203304,
+      "year_end_price": 23.549999237060547,
+      "price_to_earnings": 84.10714013235909,
+      "price_to_fcf": 11.945570656490471
+    },
+    {
+      "fiscal_year": "2016-03-31",
+      "source": "sec-edgar",
+      "revenue": 7676530000,
+      "net_income": 83300000,
+      "operating_cash_flow": 68270000,
+      "capital_expenditure": -39295000,
+      "diluted_eps": 0.24,
+      "diluted_shares": 350477000,
+      "free_cash_flow": 28975000,
+      "revenue_per_share": 21.903092071662336,
+      "free_cash_flow_per_share": 0.08267304273889585,
+      "net_margin": 0.010851257013259898,
+      "cash_conversion": 0.3478391356542617,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    },
+    {
+      "fiscal_year": "2015-03-31",
+      "source": "sec-edgar",
+      "net_income": 54971000,
+      "operating_cash_flow": -337590000,
+      "capital_expenditure": -45440000,
+      "diluted_eps": 0.15,
+      "diluted_shares": 370110000,
+      "free_cash_flow": -383030000,
+      "revenue_per_share": null,
+      "free_cash_flow_per_share": -1.034908540704115,
+      "net_margin": null,
+      "cash_conversion": -6.9678557785013915,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    },
+    {
+      "fiscal_year": "2014-03-31",
+      "source": "sec-edgar",
+      "net_income": 74819000,
+      "operating_cash_flow": 307881000,
+      "capital_expenditure": -48790000,
+      "diluted_eps": 0.19,
+      "diluted_shares": 387806000,
+      "free_cash_flow": 259091000,
+      "revenue_per_share": null,
+      "free_cash_flow_per_share": 0.6680943564565788,
+      "net_margin": null,
+      "cash_conversion": 3.4629038078562933,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    },
+    {
+      "fiscal_year": "2013-03-31",
+      "source": "sec-edgar",
+      "net_income": 81762000,
+      "operating_cash_flow": 881136000,
+      "capital_expenditure": -28899000,
+      "diluted_eps": 0.21,
+      "diluted_shares": 390321000,
+      "free_cash_flow": 852237000,
+      "revenue_per_share": null,
+      "free_cash_flow_per_share": 2.1834259494108696,
+      "net_margin": null,
+      "cash_conversion": 10.423387392676304,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    },
+    {
+      "fiscal_year": "2012-03-31",
+      "source": "sec-edgar",
+      "net_income": -11666000,
+      "operating_cash_flow": 760140000,
+      "capital_expenditure": -13942000,
+      "diluted_eps": -0.03,
+      "diluted_shares": 380502000,
+      "free_cash_flow": 746198000,
+      "revenue_per_share": null,
+      "free_cash_flow_per_share": 1.9610882465795187,
+      "net_margin": null,
+      "cash_conversion": -63.96348362763587,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    },
+    {
+      "fiscal_year": "2011-03-31",
+      "source": "sec-edgar",
+      "net_income": -39526000,
+      "operating_cash_flow": 17279000,
+      "capital_expenditure": -21238000,
+      "diluted_eps": -0.1,
+      "diluted_shares": 379544000,
+      "free_cash_flow": -3959000,
+      "revenue_per_share": null,
+      "free_cash_flow_per_share": -0.010430938178445714,
+      "net_margin": null,
+      "cash_conversion": 0.10016191873703385,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    },
+    {
+      "fiscal_year": "2010-03-31",
+      "source": "sec-edgar",
+      "net_income": -12488000,
+      "operating_cash_flow": 592124000,
+      "capital_expenditure": -15179000,
+      "diluted_eps": -0.03,
+      "diluted_shares": 377747000,
+      "free_cash_flow": 576945000,
+      "revenue_per_share": null,
+      "free_cash_flow_per_share": 1.5273317855601765,
+      "net_margin": null,
+      "cash_conversion": -46.19995195387572,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    },
+    {
+      "fiscal_year": "2009-12-31",
+      "source": "sec-edgar",
+      "net_income": -1182567000,
+      "operating_cash_flow": 729355000,
+      "capital_expenditure": -39252000,
+      "diluted_eps": -3.94,
+      "diluted_shares": 300179000,
+      "free_cash_flow": 690103000,
+      "revenue_per_share": null,
+      "free_cash_flow_per_share": 2.298971613603883,
+      "net_margin": null,
+      "cash_conversion": -0.5835635528473229,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    },
+    {
+      "fiscal_year": "2008-12-31",
+      "source": "sec-edgar",
+      "net_income": -1473113000,
+      "operating_cash_flow": 1220392000,
+      "capital_expenditure": -18878000,
+      "diluted_eps": -5.81,
+      "diluted_shares": 253512000,
+      "free_cash_flow": 1201514000,
+      "revenue_per_share": null,
+      "free_cash_flow_per_share": 4.739475843352583,
+      "net_margin": null,
+      "cash_conversion": -0.815629215138282,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    }
+  ],
+  "historical_metrics": {
+    "available_growth_windows": {
+      "revenue": [
+        1,
+        3,
+        5
+      ],
+      "earnings": [
+        1,
+        3,
+        5,
+        10
+      ],
+      "free_cash_flow": [
+        1,
+        3,
+        5,
+        10
+      ]
+    },
+    "growth": {
+      "revenue": {
+        "1y": -0.03538188940182041,
+        "3y": 0.026553866296244344,
+        "5y": 0.09422398249785235,
+        "10y": null
+      },
+      "earnings": {
+        "1y": -0.2803952437386119,
+        "3y": -0.053582613906989374,
+        "5y": 0.6121965779495817,
+        "10y": 0.44742837382699485
+      },
+      "free_cash_flow": {
+        "1y": 0.1192409148605631,
+        "3y": 0.4652682118091842,
+        "5y": 0.0025988733351183235,
+        "10y": null
+      }
+    },
+    "averages": {
+      "net_margin": {
+        "1y": 0.12816173888642143,
+        "3y": 0.1539950262763817,
+        "5y": 0.15344429865962234,
+        "10y": 0.08402881469255524
+      },
+      "cash_conversion": {
+        "1y": 0.7880783150721359,
+        "3y": 0.7011580453159972,
+        "5y": 0.5588585659731617,
+        "10y": 3.2750049133419474
+      },
+      "price_to_earnings": {
+        "1y": 10.544964220884035,
+        "3y": 8.921779309056735,
+        "5y": 7.718761049592241,
+        "10y": null
+      },
+      "price_to_fcf": {
+        "1y": 13.381336838513782,
+        "3y": 12.951685956215059,
+        "5y": 14.83112727270942,
+        "10y": null
+      }
+    }
+  },
+  "calculator_contract": {
+    "forward_models": {
+      "revenue_growth": {
+        "base": "valuation_bases.revenue.per_share",
+        "margin": "user_input.net_margin",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "earnings_growth": {
+        "base": "valuation_bases.earnings.per_share",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "fcf_growth": {
+        "base": "valuation_bases.free_cash_flow.per_share",
+        "terminal_multiple": "user_input.terminal_price_to_fcf"
+      }
+    },
+    "common_user_inputs": [
+      "projection_years",
+      "growth_rate",
+      "discount_rate"
+    ],
+    "forward_output": "fair_value_per_share",
+    "reverse_output": "implied_compound_growth_rate"
+  },
+  "data_quality": {
+    "warnings": []
+  }
+}

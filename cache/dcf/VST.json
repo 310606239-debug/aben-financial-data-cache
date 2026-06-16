@@ -12,11 +12,14 @@
     "sec-edgar",
     "yfinance"
   ],
-  "fetched_at": "2026-06-16T04:58:36.020523+00:00",
+  "fetched_at": "2026-06-16T12:15:07.387239+00:00",
   "market_data": {
     "as_of": "2026-06-15",
     "price": 153.52000427246094,
     "shares_outstanding": 338079954,
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-06-16T12:14:59.403270+00:00",
     "market_cap": 51902035982.5134,
     "cash_and_short_term_investments": 634000000,
     "total_debt": 19913000000,
@@ -179,22 +182,39 @@
       "price_to_fcf": 6.432684699939919
     },
     {
-      "fiscal_year": "2018-09-30",
+      "fiscal_year": "2018-03-31",
       "source": "sec-edgar",
       "revenue": 9797000000,
-      "net_income": 330000000,
+      "net_income": -306000000,
       "operating_cash_flow": 1471000000,
       "capital_expenditure": -530000000,
-      "diluted_eps": 0.61,
+      "diluted_eps": -0.71,
       "diluted_shares": 504954371,
       "free_cash_flow": 941000000,
       "revenue_per_share": 19.40175303483015,
       "free_cash_flow_per_share": 1.863534715298068,
-      "net_margin": 0.03368378074920894,
-      "cash_conversion": 2.8515151515151516,
-      "year_end_price": 24.8799991607666,
-      "price_to_earnings": 40.786883870109186,
-      "price_to_fcf": 13.3509716543097
+      "net_margin": -0.031234051240175562,
+      "cash_conversion": -3.0751633986928106,
+      "year_end_price": 20.829999923706055,
+      "price_to_earnings": -29.338028061557825,
+      "price_to_fcf": 11.17768279426678
+    },
+    {
+      "fiscal_year": "2017-12-31",
+      "source": "sec-edgar",
+      "net_income": -254000000,
+      "operating_cash_flow": 1386000000,
+      "capital_expenditure": -114000000,
+      "diluted_eps": -0.59,
+      "diluted_shares": 427761460,
+      "free_cash_flow": 1272000000,
+      "revenue_per_share": null,
+      "free_cash_flow_per_share": 2.973619923590124,
+      "net_margin": null,
+      "cash_conversion": -5.0078740157480315,
+      "year_end_price": 18.31999969482422,
+      "price_to_earnings": -31.050846940380033,
+      "price_to_fcf": 6.160841050831417
     }
   ],
   "historical_metrics": {
