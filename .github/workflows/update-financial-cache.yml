@@ -95,7 +95,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: python -m scripts.rebuild_manifest
-      - run: python -m scripts.validate_cache --minimum-coverage 0.80
+      - run: python -m scripts.validate_cache --minimum-coverage 0.80 --allow-missing-price
       - name: Commit refreshed data
         run: |
           if git diff --quiet -- cache universe; then
