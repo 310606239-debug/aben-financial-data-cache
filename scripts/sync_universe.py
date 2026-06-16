@@ -19,6 +19,10 @@ CSI300_URL = (
     "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/"
     "file/autofile/cons/000300cons.xls"
 )
+STAR50_URL = (
+    "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/"
+    "file/autofile/cons/000688cons.xls"
+)
 
 HSTECH_CONSTITUENTS = [
     ("00020", "SenseTime"),
@@ -232,8 +236,8 @@ def sync_qqq() -> dict[str, Any]:
     }
 
 
-def sync_csi300() -> dict[str, Any]:
-    content = _get(CSI300_URL).content
+def sync_csi_excel(index_id: str, name: str, url: str) -> dict[str, Any]:
+    content = _get(url).content
     frame = pd.read_excel(io.BytesIO(content))
     stocks = []
     for _, row in frame.iterrows():
@@ -249,18 +253,26 @@ def sync_csi300() -> dict[str, Any]:
                 "exchange": "SSE" if suffix == ".SS" else "SZSE",
                 "currency": "CNY",
                 "market": "CN",
-                "indexes": ["csi300"],
+                "indexes": [index_id],
                 "enabled": True,
             }
         )
     return {
-        "id": "csi300",
-        "name": "CSI 300",
-        "source": CSI300_URL,
+        "id": index_id,
+        "name": name,
+        "source": url,
         "as_of": str(int(frame.iloc[0]["日期Date"])),
         "constituent_count": len(stocks),
         "stocks": stocks,
     }
+
+
+def sync_csi300() -> dict[str, Any]:
+    return sync_csi_excel("csi300", "CSI 300", CSI300_URL)
+
+
+def sync_star50() -> dict[str, Any]:
+    return sync_csi_excel("star50", "SSE STAR 50", STAR50_URL)
 
 
 def sync_hstech() -> dict[str, Any]:
@@ -347,6 +359,7 @@ def main() -> int:
         sync_or_load_existing("sp500", sync_sp500),
         sync_or_load_existing("qqq", sync_qqq),
         sync_or_load_existing("csi300", sync_csi300),
+        sync_or_load_existing("star50", sync_star50),
         sync_chinext(),
         sync_hstech(),
     ]
