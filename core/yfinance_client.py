@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import math
+import json
 import time
 from datetime import datetime, timezone
 from typing import Any, Optional, Union
@@ -15,7 +16,7 @@ from core.metrics import (
     safe_ratio,
 )
 from core.sec_client import fetch_sec_annual
-from core.settings import SCHEMA_VERSION
+from core.settings import DCF_CACHE_DIR, PREVIOUS_DCF_CACHE_DIR, SCHEMA_VERSION
 from core.universe import Stock
 
 
@@ -175,7 +176,63 @@ def _merge_annual(
             if value is not None:
                 merged[key] = value
         rows[year] = merged
-    return [rows[year] for year in sorted(rows, reverse=True)[:12]]
+    return [rows[year] for year in sorted(rows, reverse=True)]
+
+
+def _load_existing_annual(symbol: str) -> list[dict[str, Any]]:
+    current_path = DCF_CACHE_DIR / f"{symbol}.json"
+    previous_path = PREVIOUS_DCF_CACHE_DIR / f"{symbol}.json"
+    path = current_path if current_path.exists() else previous_path
+    try:
+        with path.open(encoding="utf-8") as file:
+            payload = json.load(file)
+    except (FileNotFoundError, OSError, json.JSONDecodeError):
+        return []
+    annual = payload.get("annual")
+    return annual if isinstance(annual, list) else []
+
+
+def _merge_existing_annual(
+    existing: list[dict[str, Any]],
+    refreshed: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    rows: dict[str, dict[str, Any]] = {
+        row["fiscal_year"][:4]: dict(row)
+        for row in existing
+        if row.get("fiscal_year")
+    }
+
+    for refreshed_row in refreshed:
+        year = refreshed_row["fiscal_year"][:4]
+        merged = rows.get(year, {"fiscal_year": refreshed_row["fiscal_year"]})
+        for key, value in refreshed_row.items():
+            if value is not None or key not in merged:
+                merged[key] = value
+        rows[year] = merged
+
+    return [rows[year] for year in sorted(rows, reverse=True)]
+
+
+def _latest_shares(
+    balance_quarterly: pd.DataFrame,
+    balance_annual: pd.DataFrame,
+    income_quarterly: pd.DataFrame,
+) -> tuple[Number, Optional[str]]:
+    shares = _latest_across(
+        [balance_quarterly, balance_annual],
+        ["Ordinary Shares Number", "Share Issued"],
+    )
+    if shares is not None:
+        return shares, "yfinance.balance_sheet"
+
+    shares = _latest_value(
+        income_quarterly,
+        ["Diluted Average Shares", "Basic Average Shares"],
+    )
+    if shares is not None:
+        return shares, "yfinance.quarterly_income_stmt"
+
+    return None, None
 
 
 def _attach_derived_fields(
@@ -249,15 +306,11 @@ def fetch_stock(stock: Stock, *, attempts: int = 3) -> dict[str, Any]:
             latest_price_date = price_frame.sort_index().index[-1]
             price = _json_number(latest_price_row.get("Close"))
 
-            shares = _latest_across(
-                [balance_quarterly, balance_annual],
-                ["Ordinary Shares Number", "Share Issued"],
+            shares, shares_source = _latest_shares(
+                balance_quarterly,
+                balance_annual,
+                income_quarterly,
             )
-            if shares is None:
-                shares = _latest_value(
-                    income_quarterly,
-                    ["Diluted Average Shares", "Basic Average Shares"],
-                )
 
             revenue_ttm = _sum_quarters(income_quarterly, ["Total Revenue"])
             net_income_ttm = _sum_quarters(
@@ -295,6 +348,10 @@ def fetch_stock(stock: Stock, *, attempts: int = 3) -> dict[str, Any]:
 
             annual = _merge_annual(sec_annual, yfinance_annual)
             _attach_derived_fields(annual, price_frame)
+            annual = _merge_existing_annual(
+                _load_existing_annual(stock.symbol),
+                annual,
+            )
 
             revenue_base, revenue_period = _latest_positive_base(
                 revenue_ttm, annual, "revenue"
@@ -343,6 +400,13 @@ def fetch_stock(stock: Stock, *, attempts: int = 3) -> dict[str, Any]:
                     "as_of": _date_string(latest_price_date),
                     "price": price,
                     "shares_outstanding": shares,
+                    "shares_source": shares_source,
+                    "shares_kind": (
+                        "ordinary_shares_or_latest_diluted_average_shares"
+                        if shares is not None
+                        else None
+                    ),
+                    "shares_refreshed_at": datetime.now(timezone.utc).isoformat(),
                     "market_cap": market_cap,
                     "cash_and_short_term_investments": cash,
                     "total_debt": debt,
