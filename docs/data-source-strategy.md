@@ -72,3 +72,28 @@ annual chart fields as historical diluted per-share metrics.
   expensive for hundreds of companies.
 - Storing each newly reported fiscal year creates a durable internal history going
   forward, even when an upstream free API later shortens its history.
+
+## Long-Term DCF Guardrails
+
+Long-running valuation data should protect against these drift risks:
+
+- Currency: price, revenue, FCF, cash, debt, and per-share metrics must keep their
+  source currency. Cross-listed stocks and ADRs should not be mixed without an FX
+  conversion layer.
+- Share count: current shares are for current market cap and TTM bases; annual
+  diluted shares are for historical per-share trends.
+- Splits and corporate actions: price history from yfinance is adjusted enough for
+  current prototype ratios, but current shares should still be refreshed after split,
+  buyback, issuance, or major stock compensation events.
+- Negative or cyclical FCF: reverse DCF should block or clearly label calculations
+  when the base metric is negative, near zero, or not economically meaningful.
+- Missing years: do not interpolate financial history by default. Expose available
+  windows and let the UI disable 5-year or 10-year views when real data is missing.
+- Restatements: newer SEC/company facts should overwrite the same fiscal year, but
+  older snapshots remain archived for audit.
+- Index membership: current index constituents are refreshed; historical membership
+  is not yet modeled, so backtests should not treat today's universe as a historical
+  index portfolio.
+- Financial company metrics: banks, insurers, brokers, and asset managers may need
+  separate valuation models because debt, cash flow, and enterprise value behave
+  differently from industrial companies.
