@@ -2,6 +2,20 @@ name: Update financial cache
 
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "Update mode: stale, missing, or force"
+        default: "stale"
+        required: false
+        type: choice
+        options:
+          - stale
+          - missing
+          - force
+      stale_days:
+        description: "Refresh caches older than this many days when mode=stale"
+        default: "7"
+        required: false
   push:
     branches:
       - main
@@ -62,8 +76,28 @@ jobs:
           rm -rf cache/_previous_dcf
           && mkdir -p cache/_previous_dcf
           && cp -R cache/dcf/. cache/_previous_dcf/ 2>/dev/null || true
-          && rm -rf cache/dcf
           && mkdir -p cache/dcf cache/history/dcf
+      - name: Build update arguments
+        id: update_args
+        env:
+          MODE: ${{ github.event.inputs.mode || 'stale' }}
+          STALE_DAYS: ${{ github.event.inputs.stale_days || '7' }}
+        run: |
+          case "$MODE" in
+            force)
+              echo "args=--force" >> "$GITHUB_OUTPUT"
+              ;;
+            missing)
+              echo "args=--missing-only" >> "$GITHUB_OUTPUT"
+              ;;
+            stale|"")
+              echo "args=--stale-days ${STALE_DAYS:-7}" >> "$GITHUB_OUTPUT"
+              ;;
+            *)
+              echo "Unsupported mode: $MODE" >&2
+              exit 2
+              ;;
+          esac
       - name: Update shard
         env:
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
@@ -73,6 +107,7 @@ jobs:
           --shard-count 24
           --skip-manifest
           --allow-partial
+          ${{ steps.update_args.outputs.args }}
       - name: Backfill SEC annual history
         env:
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
@@ -82,6 +117,7 @@ jobs:
           --shard-count 24
           --skip-manifest
           --allow-partial
+          ${{ steps.update_args.outputs.args }}
       - uses: actions/upload-artifact@v4
         with:
           name: cache-${{ matrix.shard }}
