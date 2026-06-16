@@ -2,6 +2,11 @@ name: Update financial cache
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - trigger/update-financial-cache.txt
   schedule:
     # Weekly fundamental refresh, Sunday 04:20 UTC.
     - cron: "20 4 * * 0"
