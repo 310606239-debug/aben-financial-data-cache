@@ -10,10 +10,14 @@ class SyncUniverseTests(unittest.TestCase):
         self.assertTrue(
             {
                 "sse50",
+                "csi100",
+                "csi200",
                 "csi300",
                 "csi500",
                 "csi800",
                 "csi1000",
+                "csi2000",
+                "csi_all",
                 "star50",
                 "star100",
             }.issubset(index_ids)
