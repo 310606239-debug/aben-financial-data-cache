@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import io
 import json
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -172,13 +173,23 @@ CHINEXT_CONSTITUENTS = [
 
 
 def _get(url: str) -> requests.Response:
-    response = requests.get(
-        url,
-        headers={"User-Agent": "AbenFinancialDataCache/1.0"},
-        timeout=60,
-    )
-    response.raise_for_status()
-    return response
+    last_error: Exception | None = None
+    for attempt in range(1, 4):
+        try:
+            response = requests.get(
+                url,
+                headers={"User-Agent": "AbenFinancialDataCache/1.0"},
+                timeout=180,
+            )
+            response.raise_for_status()
+            return response
+        except requests.RequestException as error:
+            last_error = error
+            if attempt == 3:
+                break
+            print(f"Retrying {url} after download error: {error}")
+            time.sleep(attempt * 5)
+    raise last_error or RuntimeError(f"Failed to download {url}")
 
 
 def sync_sp500() -> dict[str, Any]:
@@ -278,6 +289,7 @@ def sync_csi_excel(index_id: str, name: str, url: str) -> dict[str, Any]:
 
 
 def sync_csi_configured_index(index_id: str, name: str, code: str) -> dict[str, Any]:
+    print(f"Syncing {index_id} ({code}) from CSI official constituent file.")
     return sync_csi_excel(index_id, name, CSI_AUTOFILE_BASE_URL.format(code=code))
 
 
