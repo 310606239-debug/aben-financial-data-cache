@@ -1,0 +1,158 @@
+{
+  "schema_version": 3,
+  "symbol": "603376.SS",
+  "name": "Daming Electronics Co.,Ltd.",
+  "exchange": "SSE",
+  "currency": "CNY",
+  "market": "CN",
+  "indexes": [
+    "csi1000"
+  ],
+  "sources": [
+    "yfinance"
+  ],
+  "fetched_at": "2026-06-17T07:29:49.394222+00:00",
+  "market_data": {
+    "as_of": "2026-06-17",
+    "price": 26.93000030517578,
+    "shares_outstanding": 400001000,
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-06-17T07:29:49.394236+00:00",
+    "market_cap": 10772027052.070618,
+    "cash_and_short_term_investments": 154230082.41,
+    "total_debt": 441812828.34,
+    "enterprise_value": 11059609798.000618
+  },
+  "ttm": {
+    "revenue": null,
+    "net_income": null,
+    "diluted_eps": null,
+    "free_cash_flow": null,
+    "operating_cash_flow": null,
+    "capital_expenditure": null,
+    "revenue_per_share": null,
+    "free_cash_flow_per_share": null,
+    "net_margin": null,
+    "cash_conversion": null
+  },
+  "valuation_bases": {
+    "revenue": {
+      "value": 3106481577.1,
+      "period": "2025-12-31",
+      "per_share": 7.766184527288681
+    },
+    "earnings": {
+      "value": 247855265.53,
+      "period": "2025-12-31",
+      "per_share": 0.6196366147334632
+    },
+    "free_cash_flow": {
+      "value": -15847742.5,
+      "period": "2025-12-31",
+      "per_share": -0.039619257201856994
+    }
+  },
+  "annual": [
+    {
+      "fiscal_year": "2025-12-31",
+      "source": "yfinance",
+      "revenue": 3106481577.1,
+      "net_income": 247855265.53,
+      "diluted_eps": 0.68,
+      "diluted_shares": 364493038,
+      "operating_cash_flow": 381810502.83,
+      "capital_expenditure": -397658245.33,
+      "free_cash_flow": -15847742.5,
+      "revenue_per_share": 8.5227459875379,
+      "free_cash_flow_per_share": -0.04347886200229701,
+      "net_margin": 0.07978649136602343,
+      "cash_conversion": -0.06393950302452547,
+      "year_end_price": 36.90999984741211,
+      "price_to_earnings": 54.27941154031192,
+      "price_to_fcf": -848.9182593017761
+    }
+  ],
+  "historical_metrics": {
+    "available_growth_windows": {
+      "revenue": [],
+      "earnings": [],
+      "free_cash_flow": []
+    },
+    "growth": {
+      "revenue": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "earnings": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "free_cash_flow": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    },
+    "averages": {
+      "net_margin": {
+        "1y": 0.07978649136602343,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "cash_conversion": {
+        "1y": -0.06393950302452547,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_earnings": {
+        "1y": 54.27941154031192,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_fcf": {
+        "1y": -848.9182593017761,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    }
+  },
+  "calculator_contract": {
+    "forward_models": {
+      "revenue_growth": {
+        "base": "valuation_bases.revenue.per_share",
+        "margin": "user_input.net_margin",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "earnings_growth": {
+        "base": "valuation_bases.earnings.per_share",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "fcf_growth": {
+        "base": "valuation_bases.free_cash_flow.per_share",
+        "terminal_multiple": "user_input.terminal_price_to_fcf"
+      }
+    },
+    "common_user_inputs": [
+      "projection_years",
+      "growth_rate",
+      "discount_rate"
+    ],
+    "forward_output": "fair_value_per_share",
+    "reverse_output": "implied_compound_growth_rate"
+  },
+  "data_quality": {
+    "warnings": [
+      "fewer than 5 annual financial periods are available"
+    ]
+  }
+}

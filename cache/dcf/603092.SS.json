@@ -1,0 +1,159 @@
+{
+  "schema_version": 3,
+  "symbol": "603092.SS",
+  "name": "Delijia Transmission Technology (Jiangsu) Co.,Ltd.",
+  "exchange": "SSE",
+  "currency": "CNY",
+  "market": "CN",
+  "indexes": [
+    "csi500",
+    "csi800"
+  ],
+  "sources": [
+    "yfinance"
+  ],
+  "fetched_at": "2026-06-17T07:27:39.756143+00:00",
+  "market_data": {
+    "as_of": "2026-06-17",
+    "price": 58.90999984741211,
+    "shares_outstanding": 400000100,
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-06-17T07:27:39.756155+00:00",
+    "market_cap": 23564005829.96483,
+    "cash_and_short_term_investments": 2804840371.18,
+    "total_debt": 525533791.05,
+    "enterprise_value": 21284699249.834827
+  },
+  "ttm": {
+    "revenue": null,
+    "net_income": null,
+    "diluted_eps": null,
+    "free_cash_flow": 549471189.44,
+    "operating_cash_flow": null,
+    "capital_expenditure": -443338640.39,
+    "revenue_per_share": null,
+    "free_cash_flow_per_share": 1.3736776301805926,
+    "net_margin": null,
+    "cash_conversion": null
+  },
+  "valuation_bases": {
+    "revenue": {
+      "value": 5420187684.53,
+      "period": "2025-12-31",
+      "per_share": 13.550465823708544
+    },
+    "earnings": {
+      "value": 827372269.97,
+      "period": "2025-12-31",
+      "per_share": 2.0684301578174606
+    },
+    "free_cash_flow": {
+      "value": 549471189.44,
+      "period": "ttm",
+      "per_share": 1.3736776301805926
+    }
+  },
+  "annual": [
+    {
+      "fiscal_year": "2025-12-31",
+      "source": "yfinance",
+      "revenue": 5420187684.53,
+      "net_income": 827372269.97,
+      "diluted_eps": 2.2772,
+      "diluted_shares": 363328768,
+      "operating_cash_flow": 739396209.8,
+      "capital_expenditure": -370478078.98,
+      "free_cash_flow": 368918130.82,
+      "revenue_per_share": 14.918135204008948,
+      "free_cash_flow_per_share": 1.0153837606935656,
+      "net_margin": 0.152646424464496,
+      "cash_conversion": 0.44589134082699766,
+      "year_end_price": 62.4900016784668,
+      "price_to_earnings": 27.44159567823063,
+      "price_to_fcf": 61.54323527469311
+    }
+  ],
+  "historical_metrics": {
+    "available_growth_windows": {
+      "revenue": [],
+      "earnings": [],
+      "free_cash_flow": []
+    },
+    "growth": {
+      "revenue": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "earnings": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "free_cash_flow": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    },
+    "averages": {
+      "net_margin": {
+        "1y": 0.152646424464496,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "cash_conversion": {
+        "1y": 0.44589134082699766,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_earnings": {
+        "1y": 27.44159567823063,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_fcf": {
+        "1y": 61.54323527469311,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    }
+  },
+  "calculator_contract": {
+    "forward_models": {
+      "revenue_growth": {
+        "base": "valuation_bases.revenue.per_share",
+        "margin": "user_input.net_margin",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "earnings_growth": {
+        "base": "valuation_bases.earnings.per_share",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "fcf_growth": {
+        "base": "valuation_bases.free_cash_flow.per_share",
+        "terminal_multiple": "user_input.terminal_price_to_fcf"
+      }
+    },
+    "common_user_inputs": [
+      "projection_years",
+      "growth_rate",
+      "discount_rate"
+    ],
+    "forward_output": "fair_value_per_share",
+    "reverse_output": "implied_compound_growth_rate"
+  },
+  "data_quality": {
+    "warnings": [
+      "fewer than 5 annual financial periods are available"
+    ]
+  }
+}
