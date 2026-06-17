@@ -74,7 +74,9 @@ jobs:
         run: test -n "$SEC_USER_AGENT"
       - run: >-
           rm -rf cache/_previous_dcf
+          cache/reports/failures
           && mkdir -p cache/_previous_dcf
+          cache/reports/failures
           && cp -R cache/dcf/. cache/_previous_dcf/ 2>/dev/null || true
           && mkdir -p cache/dcf cache/history/dcf
       - name: Build update arguments
@@ -124,12 +126,14 @@ jobs:
           path: |
             cache/dcf
             cache/history/dcf
+            cache/reports/failures
 
   publish:
     needs: [universe, update]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: rm -rf cache/reports/failures
       - uses: actions/download-artifact@v4
         with:
           pattern: cache-*
@@ -144,6 +148,7 @@ jobs:
           python-version: "3.11"
       - run: python -m scripts.reconcile_cache_universe
       - run: python -m scripts.rebuild_manifest
+      - run: python -m scripts.report_cache_gaps
       - run: python -m scripts.validate_cache --minimum-coverage 0.80 --allow-missing-price
       - name: Commit refreshed data
         run: |
