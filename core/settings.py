@@ -8,6 +8,8 @@ CACHE_ROOT = REPO_ROOT / "cache"
 DCF_CACHE_DIR = CACHE_ROOT / "dcf"
 DCF_HISTORY_DIR = CACHE_ROOT / "history" / "dcf"
 PRICE_HISTORY_DIR = CACHE_ROOT / "history" / "prices"
+CACHE_REPORTS_DIR = CACHE_ROOT / "reports"
+CACHE_FAILURES_DIR = CACHE_REPORTS_DIR / "failures"
 PREVIOUS_DCF_CACHE_DIR = CACHE_ROOT / "_previous_dcf"
 MANIFEST_PATH = CACHE_ROOT / "manifest.json"
 
