@@ -1,0 +1,159 @@
+{
+  "schema_version": 3,
+  "symbol": "001285.SZ",
+  "name": "Guangzhou Ruili Kormee Automotive Electronic Co., Ltd.",
+  "exchange": "SZSE",
+  "currency": "CNY",
+  "market": "CN",
+  "indexes": [
+    "csi2000",
+    "csi_all"
+  ],
+  "sources": [
+    "yfinance"
+  ],
+  "fetched_at": "2026-06-17T08:34:15.556613+00:00",
+  "market_data": {
+    "as_of": "2026-06-17",
+    "price": 44.33000183105469,
+    "shares_outstanding": 180178184,
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-06-17T08:34:15.556628+00:00",
+    "market_cap": 7987299226.636108,
+    "cash_and_short_term_investments": 2159138954.26,
+    "total_debt": 29497146.75,
+    "enterprise_value": 5857657419.126108
+  },
+  "ttm": {
+    "revenue": 2338778728.27,
+    "net_income": 320028162.44,
+    "diluted_eps": null,
+    "free_cash_flow": 112593164.16,
+    "operating_cash_flow": null,
+    "capital_expenditure": -175092942.34,
+    "revenue_per_share": 12.980365748774558,
+    "free_cash_flow_per_share": 0.6248989842188664,
+    "net_margin": 0.1368355879808799,
+    "cash_conversion": 0.35182267492195896
+  },
+  "valuation_bases": {
+    "revenue": {
+      "value": 2338778728.27,
+      "period": "ttm",
+      "per_share": 12.980365748774558
+    },
+    "earnings": {
+      "value": 320028162.44,
+      "period": "ttm",
+      "per_share": 1.776175979440441
+    },
+    "free_cash_flow": {
+      "value": 112593164.16,
+      "period": "ttm",
+      "per_share": 0.6248989842188664
+    }
+  },
+  "annual": [
+    {
+      "fiscal_year": "2025-12-31",
+      "source": "yfinance",
+      "revenue": 2392748154.09,
+      "net_income": 333030600.76,
+      "diluted_eps": 2.27,
+      "diluted_shares": 146709516,
+      "operating_cash_flow": 367308750.68,
+      "capital_expenditure": -190975416.28,
+      "free_cash_flow": 176333334.4,
+      "revenue_per_share": 16.30942708644748,
+      "free_cash_flow_per_share": 1.2019215876903309,
+      "net_margin": 0.13918330693965442,
+      "cash_conversion": 0.5294808765248435,
+      "year_end_price": 58.310001373291016,
+      "price_to_earnings": 25.68722527457754,
+      "price_to_fcf": 48.51398125342125
+    }
+  ],
+  "historical_metrics": {
+    "available_growth_windows": {
+      "revenue": [],
+      "earnings": [],
+      "free_cash_flow": []
+    },
+    "growth": {
+      "revenue": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "earnings": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "free_cash_flow": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    },
+    "averages": {
+      "net_margin": {
+        "1y": 0.13918330693965442,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "cash_conversion": {
+        "1y": 0.5294808765248435,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_earnings": {
+        "1y": 25.68722527457754,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_fcf": {
+        "1y": 48.51398125342125,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    }
+  },
+  "calculator_contract": {
+    "forward_models": {
+      "revenue_growth": {
+        "base": "valuation_bases.revenue.per_share",
+        "margin": "user_input.net_margin",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "earnings_growth": {
+        "base": "valuation_bases.earnings.per_share",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "fcf_growth": {
+        "base": "valuation_bases.free_cash_flow.per_share",
+        "terminal_multiple": "user_input.terminal_price_to_fcf"
+      }
+    },
+    "common_user_inputs": [
+      "projection_years",
+      "growth_rate",
+      "discount_rate"
+    ],
+    "forward_output": "fair_value_per_share",
+    "reverse_output": "implied_compound_growth_rate"
+  },
+  "data_quality": {
+    "warnings": [
+      "fewer than 5 annual financial periods are available"
+    ]
+  }
+}
