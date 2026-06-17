@@ -6,10 +6,10 @@ import sys
 from datetime import datetime, timezone
 from typing import Any
 
-from core.cache import update_manifest, write_stock_cache
+from core.cache import update_manifest, write_json_atomic, write_stock_cache
 from core.metrics import available_windows, historical_average, historical_growth, safe_ratio
 from core.sec_client import fetch_sec_annual
-from core.settings import DCF_CACHE_DIR, UNIVERSE_PATH
+from core.settings import CACHE_FAILURES_DIR, DCF_CACHE_DIR, UNIVERSE_PATH
 from core.update_policy import UpdatePolicy, load_manifest_status, select_refresh_candidates
 from core.universe import Stock, load_universe
 
@@ -189,6 +189,17 @@ def main() -> int:
         except Exception as error:
             failures[stock.symbol] = str(error)
             print(f"Failed {stock.symbol}: {error}", file=sys.stderr)
+
+    if args.skip_manifest and failures:
+        write_json_atomic(
+            CACHE_FAILURES_DIR / f"update_sec_cache_shard_{args.shard_index}.json",
+            {
+                "source": "update_sec_cache",
+                "shard_index": args.shard_index,
+                "shard_count": args.shard_count,
+                "failures": failures,
+            },
+        )
 
     if not args.skip_manifest:
         update_manifest(successes, failures)
