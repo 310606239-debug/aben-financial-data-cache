@@ -15,14 +15,20 @@ from core.settings import INDEX_UNIVERSE_DIR, UNIVERSE_PATH
 
 SP500_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
 QQQ_URL = "https://en.wikipedia.org/wiki/Nasdaq-100"
-CSI300_URL = (
+CSI_AUTOFILE_BASE_URL = (
     "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/"
-    "file/autofile/cons/000300cons.xls"
+    "file/autofile/cons/{code}cons.xls"
 )
-STAR50_URL = (
-    "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/"
-    "file/autofile/cons/000688cons.xls"
-)
+
+CSI_INDEXES = [
+    ("sse50", "SSE 50", "000016"),
+    ("csi300", "CSI 300", "000300"),
+    ("csi500", "CSI 500", "000905"),
+    ("csi800", "CSI 800", "000906"),
+    ("csi1000", "CSI 1000", "000852"),
+    ("star50", "SSE STAR 50", "000688"),
+    ("star100", "SSE STAR 100", "000698"),
+]
 
 HSTECH_CONSTITUENTS = [
     ("00020", "SenseTime"),
@@ -267,12 +273,8 @@ def sync_csi_excel(index_id: str, name: str, url: str) -> dict[str, Any]:
     }
 
 
-def sync_csi300() -> dict[str, Any]:
-    return sync_csi_excel("csi300", "CSI 300", CSI300_URL)
-
-
-def sync_star50() -> dict[str, Any]:
-    return sync_csi_excel("star50", "SSE STAR 50", STAR50_URL)
+def sync_csi_configured_index(index_id: str, name: str, code: str) -> dict[str, Any]:
+    return sync_csi_excel(index_id, name, CSI_AUTOFILE_BASE_URL.format(code=code))
 
 
 def sync_hstech() -> dict[str, Any]:
@@ -353,28 +355,10 @@ def sync_or_load_existing(index_id: str, sync_fn) -> dict[str, Any]:
         }
 
 
-def main() -> int:
-    generated_at = datetime.now(timezone.utc).isoformat()
-    indexes = [
-        sync_or_load_existing("sp500", sync_sp500),
-        sync_or_load_existing("qqq", sync_qqq),
-        sync_or_load_existing("csi300", sync_csi300),
-        sync_or_load_existing("star50", sync_star50),
-        sync_chinext(),
-        sync_hstech(),
-    ]
+def combine_index_stocks(indexes: list[dict[str, Any]]) -> list[dict[str, Any]]:
     combined: dict[str, dict[str, Any]] = {}
 
     for index in indexes:
-        index_payload = {
-            "schema_version": 1,
-            "generated_at": generated_at,
-            **index,
-        }
-        write_json_atomic(
-            INDEX_UNIVERSE_DIR / f"{index['id']}.json",
-            index_payload,
-        )
         for stock in index["stocks"]:
             symbol = stock["symbol"]
             if symbol in combined:
@@ -387,6 +371,40 @@ def main() -> int:
             else:
                 combined[symbol] = stock
 
+    return sorted(combined.values(), key=lambda stock: stock["symbol"])
+
+
+def main() -> int:
+    generated_at = datetime.now(timezone.utc).isoformat()
+    indexes = [
+        sync_or_load_existing("sp500", sync_sp500),
+        sync_or_load_existing("qqq", sync_qqq),
+        *[
+            sync_or_load_existing(
+                index_id,
+                lambda index_id=index_id, name=name, code=code: sync_csi_configured_index(
+                    index_id, name, code
+                ),
+            )
+            for index_id, name, code in CSI_INDEXES
+        ],
+        sync_chinext(),
+        sync_hstech(),
+    ]
+
+    for index in indexes:
+        index_payload = {
+            "schema_version": 1,
+            "generated_at": generated_at,
+            **index,
+        }
+        write_json_atomic(
+            INDEX_UNIVERSE_DIR / f"{index['id']}.json",
+            index_payload,
+        )
+
+    stocks = combine_index_stocks(indexes)
+
     payload = {
         "schema_version": 2,
         "generated_at": generated_at,
@@ -398,11 +416,11 @@ def main() -> int:
             }
             for index in indexes
         ],
-        "stocks": sorted(combined.values(), key=lambda stock: stock["symbol"]),
+        "stocks": stocks,
     }
     write_json_atomic(UNIVERSE_PATH, payload)
     print(
-        f"Synced {len(indexes)} indexes and {len(combined)} unique securities."
+        f"Synced {len(indexes)} indexes and {len(stocks)} unique securities."
     )
     return 0
 
