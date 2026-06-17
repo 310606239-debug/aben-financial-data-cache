@@ -137,9 +137,15 @@ python -m scripts.update_cache --shard-index 0 --shard-count 48
 
 - `update-financial-cache.yml`：每周同步指数名单，48 个分片刷新财报并统一发布。
 - `update-prices.yml`：交易日每日批量刷新已有缓存的当前价格。
+- `cache/reports/cache_gaps.json`：每次发布后生成覆盖率报告，记录 universe 总数、已缓存数、
+  缺失数、失败数、按市场/指数拆分，以及缺价格、缺股本、缺年报、短历史等质量问题样本。
 
 财报任务允许个别免费源失败，但发布前要求至少 80% 股票池覆盖率。旧的成功缓存不会因
 单次抓取失败被覆盖，已入库的历史年份和历史快照会继续保留。
+
+分片更新失败时，每个 shard 会先把失败原因写到 `cache/reports/failures/`，发布阶段再合并进
+`cache/manifest.json`。这样 yfinance 暂时无数据、停牌、代码映射异常等缺口不会在重建
+manifest 时被抹掉。
 
 财报刷新支持三种模式，避免每次都全量重跑：
 
@@ -153,6 +159,7 @@ python -m scripts.update_cache --shard-index 0 --shard-count 48
 python -m scripts.update_cache --stale-days 7
 python -m scripts.update_cache --missing-only
 python -m scripts.update_cache --force
+python -m scripts.report_cache_gaps
 ```
 
 关于 5/10 年数据来源、Power BI 页面和各市场补全策略，见
