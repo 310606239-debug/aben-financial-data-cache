@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import io
 import json
+import os
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -20,6 +21,8 @@ CSI_AUTOFILE_BASE_URL = (
     "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/"
     "file/autofile/cons/{code}cons.xls"
 )
+DOWNLOAD_ATTEMPTS = int(os.getenv("ABEN_UNIVERSE_DOWNLOAD_ATTEMPTS", "2"))
+DOWNLOAD_TIMEOUT = int(os.getenv("ABEN_UNIVERSE_DOWNLOAD_TIMEOUT", "60"))
 
 CSI_INDEXES = [
     ("sse50", "SSE 50", "000016"),
@@ -174,18 +177,18 @@ CHINEXT_CONSTITUENTS = [
 
 def _get(url: str) -> requests.Response:
     last_error: Exception | None = None
-    for attempt in range(1, 4):
+    for attempt in range(1, DOWNLOAD_ATTEMPTS + 1):
         try:
             response = requests.get(
                 url,
                 headers={"User-Agent": "AbenFinancialDataCache/1.0"},
-                timeout=180,
+                timeout=DOWNLOAD_TIMEOUT,
             )
             response.raise_for_status()
             return response
         except requests.RequestException as error:
             last_error = error
-            if attempt == 3:
+            if attempt == DOWNLOAD_ATTEMPTS:
                 break
             print(f"Retrying {url} after download error: {error}")
             time.sleep(attempt * 5)
