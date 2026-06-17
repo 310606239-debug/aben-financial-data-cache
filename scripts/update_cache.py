@@ -3,8 +3,8 @@ from __future__ import annotations
 import argparse
 import sys
 
-from core.cache import update_manifest, write_stock_cache
-from core.settings import UNIVERSE_PATH
+from core.cache import update_manifest, write_json_atomic, write_stock_cache
+from core.settings import CACHE_FAILURES_DIR, UNIVERSE_PATH
 from core.update_policy import UpdatePolicy, load_manifest_status, select_refresh_candidates
 from core.universe import load_universe
 from core.yfinance_client import fetch_stock
@@ -111,6 +111,17 @@ def main() -> int:
         except Exception as error:
             failures[stock.symbol] = str(error)
             print(f"Failed {stock.symbol}: {error}", file=sys.stderr)
+
+    if args.skip_manifest and failures:
+        write_json_atomic(
+            CACHE_FAILURES_DIR / f"update_cache_shard_{args.shard_index}.json",
+            {
+                "source": "update_cache",
+                "shard_index": args.shard_index,
+                "shard_count": args.shard_count,
+                "failures": failures,
+            },
+        )
 
     if not args.skip_manifest:
         update_manifest(successes, failures)
