@@ -9,6 +9,21 @@ from scripts.reconcile_cache_universe import reconcile_cache_metadata
 
 
 class ReconcileCacheUniverseTests(unittest.TestCase):
+    def test_reports_the_path_of_invalid_cache_json(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_dir:
+            root = Path(temporary_dir)
+            cache_dir = root / "cache"
+            cache_dir.mkdir()
+            universe_path = root / "stocks.json"
+            universe_path.write_text(
+                json.dumps({"schema_version": 2, "stocks": []}),
+                encoding="utf-8",
+            )
+            (cache_dir / "BROKEN.json").write_text("{", encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "BROKEN.json"):
+                reconcile_cache_metadata(cache_dir, universe_path)
+
     def test_updates_existing_cache_indexes_from_universe(self) -> None:
         with tempfile.TemporaryDirectory() as temporary_dir:
             root = Path(temporary_dir)
