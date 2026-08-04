@@ -80,10 +80,12 @@ def select_refresh_candidates(
     stocks: Iterable[Stock],
     policy: UpdatePolicy,
     manifest_status: Optional[dict[str, dict[str, Any]]] = None,
+    *,
+    now: Optional[datetime] = None,
 ) -> list[Stock]:
     status = manifest_status if manifest_status is not None else load_manifest_status()
     return [
         stock
         for stock in stocks
-        if should_refresh_stock(stock, policy, status)
+        if should_refresh_stock(stock, policy, status, now=now)
     ]
