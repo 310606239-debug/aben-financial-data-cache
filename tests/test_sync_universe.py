@@ -1,9 +1,31 @@
 import unittest
 
-from scripts.sync_universe import CSI_INDEXES, combine_index_stocks
+from scripts.sync_universe import (
+    CSI_INDEXES,
+    combine_index_stocks,
+    csi_exchange_details,
+)
 
 
 class SyncUniverseTests(unittest.TestCase):
+    def test_maps_all_supported_csi_exchanges_explicitly(self) -> None:
+        self.assertEqual(
+            csi_exchange_details("Shanghai Stock Exchange"),
+            (".SS", "SSE"),
+        )
+        self.assertEqual(
+            csi_exchange_details("Shenzhen Stock Exchange"),
+            (".SZ", "SZSE"),
+        )
+        self.assertEqual(
+            csi_exchange_details("Beijing Stock Exchange"),
+            (".BJ", "BSE"),
+        )
+
+    def test_rejects_unknown_csi_exchange(self) -> None:
+        with self.assertRaisesRegex(ValueError, "Unsupported CSI exchange"):
+            csi_exchange_details("Unknown Exchange")
+
     def test_tracks_core_a_share_indexes(self) -> None:
         index_ids = {index_id for index_id, _, _ in CSI_INDEXES}
 

@@ -46,6 +46,7 @@ class UpdatePolicyTests(unittest.TestCase):
                 [self.stock()],
                 UpdatePolicy(stale_days=7),
                 {"AAPL": {"status": "ok", "fetched_at": "2026-06-15T12:00:00+00:00"}},
+                now=datetime(2026, 6, 20, 12, 0, tzinfo=timezone.utc),
             )
 
         self.assertEqual(selected, [])

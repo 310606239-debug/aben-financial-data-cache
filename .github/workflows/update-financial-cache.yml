@@ -123,13 +123,15 @@ jobs:
           --skip-manifest
           --allow-partial
           ${{ steps.update_args.outputs.args }}
+      - name: Stage changed files for this shard
+        run: >-
+          python -m scripts.stage_cache_artifact
+          --shard-index ${{ matrix.shard }}
+          --output _shard_artifact
       - uses: actions/upload-artifact@v4
         with:
           name: cache-${{ matrix.shard }}
-          path: |
-            cache/dcf
-            cache/history/dcf
-            cache/reports/failures
+          path: _shard_artifact
 
   publish:
     needs: [universe, update]
@@ -140,8 +142,9 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           pattern: cache-*
-          path: cache
+          path: .
           merge-multiple: true
+      - run: rm -f cache-shard-*.json
       - uses: actions/download-artifact@v4
         with:
           name: universe

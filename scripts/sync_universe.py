@@ -260,6 +260,17 @@ def sync_qqq() -> dict[str, Any]:
     }
 
 
+def csi_exchange_details(exchange_name: str) -> tuple[str, str]:
+    normalized = exchange_name.strip().casefold()
+    if "shanghai" in normalized:
+        return ".SS", "SSE"
+    if "shenzhen" in normalized:
+        return ".SZ", "SZSE"
+    if "beijing" in normalized:
+        return ".BJ", "BSE"
+    raise ValueError(f"Unsupported CSI exchange: {exchange_name!r}")
+
+
 def sync_csi_excel(index_id: str, name: str, url: str) -> dict[str, Any]:
     content = _get(url).content
     frame = pd.read_excel(io.BytesIO(content))
@@ -267,14 +278,14 @@ def sync_csi_excel(index_id: str, name: str, url: str) -> dict[str, Any]:
     for _, row in frame.iterrows():
         code = str(int(row["成份券代码Constituent Code"])).zfill(6)
         exchange_name = str(row["交易所英文名称Exchange(Eng)"])
-        suffix = ".SS" if "Shanghai" in exchange_name else ".SZ"
+        suffix, exchange = csi_exchange_details(exchange_name)
         stocks.append(
             {
                 "symbol": f"{code}{suffix}",
                 "source_symbol": code,
                 "name": str(row["成份券英文名称Constituent Name(Eng)"]).strip(),
                 "local_name": str(row["成份券名称Constituent Name"]).strip(),
-                "exchange": "SSE" if suffix == ".SS" else "SZSE",
+                "exchange": exchange,
                 "currency": "CNY",
                 "market": "CN",
                 "indexes": [index_id],
