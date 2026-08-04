@@ -40,8 +40,13 @@ def reconcile_cache_metadata(
     changed = 0
 
     for path in sorted(cache_dir.glob("*.json")):
-        with path.open(encoding="utf-8") as file:
-            payload = json.load(file)
+        try:
+            with path.open(encoding="utf-8") as file:
+                payload = json.load(file)
+        except (OSError, json.JSONDecodeError) as error:
+            raise ValueError(f"Invalid cache JSON: {path}") from error
+        if not isinstance(payload, dict):
+            raise ValueError(f"Cache JSON must contain an object: {path}")
 
         symbol = str(payload.get("symbol", path.stem)).strip().upper()
         metadata = universe.get(symbol)
