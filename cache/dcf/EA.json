@@ -2,52 +2,50 @@
   "schema_version": 3,
   "symbol": "EA",
   "name": "Electronic Arts",
-  "exchange": "US",
+  "exchange": "NASDAQ",
   "currency": "USD",
   "market": "US",
   "indexes": [
-    "qqq",
-    "sp500"
+    "qqq"
   ],
   "sources": [
-    "sec-edgar",
     "yfinance"
   ],
-  "fetched_at": "2026-06-16T12:12:06.434214+00:00",
+  "fetched_at": "2026-08-09T05:40:57.885360+00:00",
   "market_data": {
-    "as_of": "2026-08-06",
+    "as_of": "2026-08-07",
     "price": 209.6999969482422,
-    "shares_outstanding": 252387410,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-08-07T23:11:38.426834+00:00",
-    "market_cap": 52925639106.77475,
+    "shares_outstanding": 250710000,
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-08-09T05:40:57.885371+00:00",
+    "market_cap": 52573886234.8938,
     "cash_and_short_term_investments": 2980000000,
     "total_debt": 1548000000,
-    "enterprise_value": 51493639106.77475
+    "enterprise_value": 51141886234.8938
   },
   "ttm": {
-    "revenue": 7531000000,
-    "net_income": 887000000,
-    "diluted_eps": 3.49,
+    "revenue": null,
+    "net_income": null,
+    "diluted_eps": 4.26,
     "free_cash_flow": 2323000000,
     "operating_cash_flow": 2553000000,
     "capital_expenditure": -230000000,
-    "revenue_per_share": 30.038690120059034,
+    "revenue_per_share": null,
     "free_cash_flow_per_share": 9.265685453312592,
-    "net_margin": 0.11777984331430089,
-    "cash_conversion": 2.6189402480270574
+    "net_margin": null,
+    "cash_conversion": null
   },
   "valuation_bases": {
     "revenue": {
       "value": 7531000000,
-      "period": "ttm",
+      "period": "2026-03-31",
       "per_share": 30.038690120059034
     },
     "earnings": {
       "value": 887000000,
-      "period": "ttm",
-      "per_share": 3.49
+      "period": "2026-03-31",
+      "per_share": 3.537952215707391
     },
     "free_cash_flow": {
       "value": 2323000000,
@@ -58,7 +56,7 @@
   "annual": [
     {
       "fiscal_year": "2026-03-31",
-      "source": "sec-edgar",
+      "source": "yfinance",
       "revenue": 7531000000,
       "net_income": 887000000,
       "diluted_eps": 3.51,
@@ -76,7 +74,7 @@
     },
     {
       "fiscal_year": "2025-03-31",
-      "source": "sec-edgar",
+      "source": "yfinance",
       "revenue": 7463000000,
       "net_income": 1121000000,
       "diluted_eps": 4.25,
@@ -94,7 +92,7 @@
     },
     {
       "fiscal_year": "2024-03-31",
-      "source": "sec-edgar",
+      "source": "yfinance",
       "revenue": 7562000000,
       "net_income": 1273000000,
       "diluted_eps": 4.68,
@@ -112,7 +110,7 @@
     },
     {
       "fiscal_year": "2023-03-31",
-      "source": "sec-edgar",
+      "source": "yfinance",
       "revenue": 7426000000,
       "net_income": 802000000,
       "diluted_eps": 2.88,
@@ -436,6 +434,5 @@
   },
   "data_quality": {
     "warnings": []
-  },
-  "price_refreshed_at": "2026-08-07T23:11:38.426841+00:00"
+  }
 }

@@ -9,17 +9,16 @@
     "sp500"
   ],
   "sources": [
-    "sec-edgar",
     "yfinance"
   ],
-  "fetched_at": "2026-06-16T12:15:29.381971+00:00",
+  "fetched_at": "2026-08-09T05:28:42.865803+00:00",
   "market_data": {
     "as_of": "2026-08-07",
     "price": 153.0399932861328,
     "shares_outstanding": 4144947162,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-08-07T23:12:05.313320+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-08-09T05:28:42.865815+00:00",
     "market_cap": 634342685843.8552,
     "cash_and_short_term_investments": 8435000000,
     "total_debt": 47661000000,
@@ -57,7 +56,7 @@
   "annual": [
     {
       "fiscal_year": "2025-12-31",
-      "source": "sec-edgar",
+      "source": "yfinance",
       "revenue": 323905000000,
       "net_income": 28844000000,
       "diluted_eps": 6.7,
@@ -75,7 +74,7 @@
     },
     {
       "fiscal_year": "2024-12-31",
-      "source": "sec-edgar",
+      "source": "yfinance",
       "revenue": 339247000000,
       "net_income": 33680000000,
       "diluted_eps": 7.84,
@@ -93,7 +92,7 @@
     },
     {
       "fiscal_year": "2023-12-31",
-      "source": "sec-edgar",
+      "source": "yfinance",
       "revenue": 334697000000,
       "net_income": 36010000000,
       "diluted_eps": 8.89,
@@ -111,7 +110,7 @@
     },
     {
       "fiscal_year": "2022-12-31",
-      "source": "sec-edgar",
+      "source": "yfinance",
       "revenue": 398675000000,
       "net_income": 55740000000,
       "diluted_eps": 13.26,
@@ -464,7 +463,8 @@
     "reverse_output": "implied_compound_growth_rate"
   },
   "data_quality": {
-    "warnings": []
-  },
-  "price_refreshed_at": "2026-08-07T23:12:05.313326+00:00"
+    "warnings": [
+      "SEC_USER_AGENT is not configured; using yfinance financials"
+    ]
+  }
 }

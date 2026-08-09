@@ -12,14 +12,14 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-06-17T08:34:10.855182+00:00",
+  "fetched_at": "2026-08-09T05:33:42.845873+00:00",
   "market_data": {
     "as_of": "2026-08-07",
     "price": 15.430000305175781,
     "shares_outstanding": 238000000,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-08-07T23:09:13.146501+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-08-09T05:33:42.845887+00:00",
     "market_cap": 3672340072.631836,
     "cash_and_short_term_investments": 1373018715.08,
     "total_debt": 63948748.54,
@@ -32,8 +32,8 @@
     "free_cash_flow": 1275089657.5700002,
     "operating_cash_flow": null,
     "capital_expenditure": -14872297.899999999,
-    "revenue_per_share": 20.744988437,
-    "free_cash_flow_per_share": 7.500527397470589,
+    "revenue_per_share": 14.817848883571429,
+    "free_cash_flow_per_share": 5.357519569621849,
     "net_margin": 0.06963845083265965,
     "cash_conversion": 5.191938068271734
   },
@@ -41,73 +41,91 @@
     "revenue": {
       "value": 3526648034.29,
       "period": "ttm",
-      "per_share": 20.744988437
+      "per_share": 14.817848883571429
     },
     "earnings": {
       "value": 245590305.73999998,
       "period": "ttm",
-      "per_share": 1.4446488572941176
+      "per_share": 1.0318920409243697
     },
     "free_cash_flow": {
       "value": 1275089657.5700002,
       "period": "ttm",
-      "per_share": 7.500527397470589
+      "per_share": 5.357519569621849
     }
   },
   "annual": [
+    {
+      "fiscal_year": "2025-12-31",
+      "source": "yfinance",
+      "revenue": null,
+      "net_income": null,
+      "diluted_eps": 0.907143,
+      "diluted_shares": 237535138,
+      "operating_cash_flow": null,
+      "capital_expenditure": null,
+      "free_cash_flow": null,
+      "revenue_per_share": null,
+      "free_cash_flow_per_share": null,
+      "net_margin": null,
+      "cash_conversion": null,
+      "year_end_price": 18.592857360839844,
+      "price_to_earnings": 20.496060004695888,
+      "price_to_fcf": null
+    },
     {
       "fiscal_year": "2024-12-31",
       "source": "yfinance",
       "revenue": 2918457636.36,
       "net_income": 178909240.21,
-      "diluted_eps": 1.05,
-      "diluted_shares": 170389753,
+      "diluted_eps": 0.75,
+      "diluted_shares": 238545654,
       "operating_cash_flow": 363800662.11,
       "capital_expenditure": -15752042.38,
       "free_cash_flow": 348048619.73,
-      "revenue_per_share": 17.12812880455317,
-      "free_cash_flow_per_share": 2.042661683593144,
+      "revenue_per_share": 12.234377727795453,
+      "free_cash_flow_per_share": 1.4590440609326716,
       "net_margin": 0.061302668224830464,
       "cash_conversion": 1.9453920843969135,
-      "year_end_price": 18.309999465942383,
-      "price_to_earnings": 17.438094729468936,
-      "price_to_fcf": 8.963794451626555
+      "year_end_price": 13.078571319580078,
+      "price_to_earnings": 17.438095092773438,
+      "price_to_fcf": 8.963794630862486
     },
     {
       "fiscal_year": "2023-12-31",
       "source": "yfinance",
       "revenue": 2403422142.24,
       "net_income": 141714208.21,
-      "diluted_eps": 0.83,
-      "diluted_shares": 170740010,
+      "diluted_eps": 0.592857,
+      "diluted_shares": 239036014,
       "operating_cash_flow": 176846751.25,
       "capital_expenditure": -12100835.7,
       "free_cash_flow": 164745915.55,
-      "revenue_per_share": 14.0765022928135,
-      "free_cash_flow_per_share": 0.9648934397391684,
+      "revenue_per_share": 10.054644494866785,
+      "free_cash_flow_per_share": 0.6892095998136917,
       "net_margin": 0.058963511119990666,
       "cash_conversion": 1.1625222172915106,
-      "year_end_price": 19.25,
-      "price_to_earnings": 23.192771084337352,
-      "price_to_fcf": 19.950389553071986
+      "year_end_price": 13.75,
+      "price_to_earnings": 23.192776672958235,
+      "price_to_fcf": 19.95038955307199
     },
     {
       "fiscal_year": "2022-12-31",
       "source": "yfinance",
       "revenue": 2234939738.93,
       "net_income": 118793533.89,
-      "diluted_eps": 0.7,
-      "diluted_shares": 169705048,
+      "diluted_eps": 0.5,
+      "diluted_shares": 237587068,
       "operating_cash_flow": 154012591.21,
       "capital_expenditure": -26598246.71,
       "free_cash_flow": 127414344.5,
-      "revenue_per_share": 13.169553677212948,
-      "free_cash_flow_per_share": 0.7507987888492273,
+      "revenue_per_share": 9.406824023477574,
+      "free_cash_flow_per_share": 0.5362848473722484,
       "net_margin": 0.05315290243435092,
       "cash_conversion": 1.072569695737671,
-      "year_end_price": 15.970000267028809,
-      "price_to_earnings": 22.814286095755442,
-      "price_to_fcf": 21.27067931410295
+      "year_end_price": 11.40714168548584,
+      "price_to_earnings": 22.81428337097168,
+      "price_to_fcf": 21.270676845299462
     },
     {
       "fiscal_year": "2021-12-31",
@@ -123,7 +141,7 @@
       "free_cash_flow_per_share": 0.45228776733939896,
       "net_margin": 0.056618897902190025,
       "cash_conversion": 0.8223413932211705,
-      "year_end_price": 23.959999084472656,
+      "year_end_price": 17.11428451538086,
       "price_to_earnings": 43.56363469904119,
       "price_to_fcf": 52.97512074097939
     }
@@ -177,14 +195,14 @@
         "10y": null
       },
       "price_to_earnings": {
-        "1y": 17.438094729468936,
-        "3y": 21.14838396985391,
-        "5y": null,
+        "1y": 20.496060004695888,
+        "3y": 20.375643923475852,
+        "5y": 25.500969968088086,
         "10y": null
       },
       "price_to_fcf": {
-        "1y": 8.963794451626555,
-        "3y": 16.72828777293383,
+        "1y": 8.963794630862486,
+        "3y": 16.728287009744644,
         "5y": null,
         "10y": null
       }
@@ -215,9 +233,6 @@
     "reverse_output": "implied_compound_growth_rate"
   },
   "data_quality": {
-    "warnings": [
-      "fewer than 5 annual financial periods are available"
-    ]
-  },
-  "price_refreshed_at": "2026-08-07T23:09:13.146512+00:00"
+    "warnings": []
+  }
 }

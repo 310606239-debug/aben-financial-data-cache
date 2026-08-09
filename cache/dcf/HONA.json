@@ -1,0 +1,201 @@
+{
+  "schema_version": 3,
+  "symbol": "HONA",
+  "name": "Honeywell Aerospace",
+  "exchange": "US",
+  "currency": "USD",
+  "market": "US",
+  "indexes": [
+    "sp500"
+  ],
+  "sources": [
+    "yfinance"
+  ],
+  "fetched_at": "2026-08-09T05:34:18.291496+00:00",
+  "market_data": {
+    "as_of": "2026-08-07",
+    "price": 168.50999450683594,
+    "shares_outstanding": 316882673,
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-08-09T05:34:18.291513+00:00",
+    "market_cap": 53397897486.54149,
+    "cash_and_short_term_investments": 1000000000,
+    "total_debt": 15846000000,
+    "enterprise_value": 68243897486.54149
+  },
+  "ttm": {
+    "revenue": null,
+    "net_income": null,
+    "diluted_eps": null,
+    "free_cash_flow": null,
+    "operating_cash_flow": null,
+    "capital_expenditure": null,
+    "revenue_per_share": null,
+    "free_cash_flow_per_share": null,
+    "net_margin": null,
+    "cash_conversion": null
+  },
+  "valuation_bases": {
+    "revenue": {
+      "value": 17404000000,
+      "period": "2025-12-31",
+      "per_share": 54.92253595071132
+    },
+    "earnings": {
+      "value": 1780000000,
+      "period": "2025-12-31",
+      "per_share": 5.617220983237541
+    },
+    "free_cash_flow": {
+      "value": 3201000000,
+      "period": "2025-12-31",
+      "per_share": 10.10153054345133
+    }
+  },
+  "annual": [
+    {
+      "fiscal_year": "2025-12-31",
+      "source": "yfinance",
+      "revenue": 17404000000,
+      "net_income": 1780000000,
+      "diluted_eps": 5.62,
+      "diluted_shares": 316800000,
+      "operating_cash_flow": 3705000000,
+      "capital_expenditure": -504000000,
+      "free_cash_flow": 3201000000,
+      "revenue_per_share": 54.936868686868685,
+      "free_cash_flow_per_share": 10.104166666666666,
+      "net_margin": 0.10227533900252815,
+      "cash_conversion": 1.798314606741573,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    },
+    {
+      "fiscal_year": "2024-12-31",
+      "source": "yfinance",
+      "revenue": 15445000000,
+      "net_income": 2817000000,
+      "diluted_eps": 8.892045,
+      "diluted_shares": 316800000,
+      "operating_cash_flow": 2538000000,
+      "capital_expenditure": -488000000,
+      "free_cash_flow": 2050000000,
+      "revenue_per_share": 48.75315656565657,
+      "free_cash_flow_per_share": 6.470959595959596,
+      "net_margin": 0.1823891226934283,
+      "cash_conversion": 0.7277245296414625,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    },
+    {
+      "fiscal_year": "2023-12-31",
+      "source": "yfinance",
+      "revenue": 13790000000,
+      "net_income": 2886000000,
+      "diluted_eps": 9.109848,
+      "diluted_shares": 316800000,
+      "operating_cash_flow": 2984000000,
+      "capital_expenditure": -387000000,
+      "free_cash_flow": 2597000000,
+      "revenue_per_share": 43.5290404040404,
+      "free_cash_flow_per_share": 8.19760101010101,
+      "net_margin": 0.20928208846990573,
+      "cash_conversion": 0.8998613998613999,
+      "year_end_price": null,
+      "price_to_earnings": null,
+      "price_to_fcf": null
+    }
+  ],
+  "historical_metrics": {
+    "available_growth_windows": {
+      "revenue": [
+        1
+      ],
+      "earnings": [
+        1
+      ],
+      "free_cash_flow": [
+        1
+      ]
+    },
+    "growth": {
+      "revenue": {
+        "1y": 0.1268371641307866,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "earnings": {
+        "1y": -0.36812211572594955,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "free_cash_flow": {
+        "1y": 0.5614634146341464,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    },
+    "averages": {
+      "net_margin": {
+        "1y": 0.10227533900252815,
+        "3y": 0.1646488500552874,
+        "5y": null,
+        "10y": null
+      },
+      "cash_conversion": {
+        "1y": 1.798314606741573,
+        "3y": 1.1419668454148117,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_earnings": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_fcf": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    }
+  },
+  "calculator_contract": {
+    "forward_models": {
+      "revenue_growth": {
+        "base": "valuation_bases.revenue.per_share",
+        "margin": "user_input.net_margin",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "earnings_growth": {
+        "base": "valuation_bases.earnings.per_share",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "fcf_growth": {
+        "base": "valuation_bases.free_cash_flow.per_share",
+        "terminal_multiple": "user_input.terminal_price_to_fcf"
+      }
+    },
+    "common_user_inputs": [
+      "projection_years",
+      "growth_rate",
+      "discount_rate"
+    ],
+    "forward_output": "fair_value_per_share",
+    "reverse_output": "implied_compound_growth_rate"
+  },
+  "data_quality": {
+    "warnings": [
+      "SEC_USER_AGENT is not configured; using yfinance financials",
+      "fewer than 5 annual financial periods are available"
+    ]
+  }
+}

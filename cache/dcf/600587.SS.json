@@ -12,14 +12,14 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-06-17T07:27:31.140894+00:00",
+  "fetched_at": "2026-08-09T05:27:17.816259+00:00",
   "market_data": {
     "as_of": "2026-08-07",
     "price": 12.789999961853027,
     "shares_outstanding": 606644549,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-08-07T23:09:27.378461+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-08-09T05:27:17.816270+00:00",
     "market_cap": 7758983758.568347,
     "cash_and_short_term_investments": 3110821529.99,
     "total_debt": 1160329641.31,
@@ -78,7 +78,7 @@
       "source": "yfinance",
       "revenue": 10020618625.09,
       "net_income": 691609558.03,
-      "diluted_eps": null,
+      "diluted_eps": 1.14,
       "diluted_shares": 606675051,
       "operating_cash_flow": 450733485.54,
       "capital_expenditure": -420884416.89,
@@ -88,7 +88,7 @@
       "net_margin": 0.06901864883853798,
       "cash_conversion": 0.04315884345933987,
       "year_end_price": 16.649999618530273,
-      "price_to_earnings": null,
+      "price_to_earnings": 14.60526282327217,
       "price_to_fcf": 338.40718737875375
     },
     {
@@ -114,7 +114,7 @@
       "source": "yfinance",
       "revenue": 9281768657.18,
       "net_income": 500072195.9,
-      "diluted_eps": null,
+      "diluted_eps": 0.946154,
       "diluted_shares": 528531589,
       "operating_cash_flow": 388048566.87,
       "capital_expenditure": -247575080.59,
@@ -124,7 +124,7 @@
       "net_margin": 0.05387682179658339,
       "cash_conversion": 0.280906411977543,
       "year_end_price": 21.420000076293945,
-      "price_to_earnings": null,
+      "price_to_earnings": 22.639020789738186,
       "price_to_fcf": 80.59276505843805
     }
   ],
@@ -178,7 +178,7 @@
       },
       "price_to_earnings": {
         "1y": 16.551723699460084,
-        "3y": null,
+        "3y": 18.272512607127066,
         "5y": null,
         "10y": null
       },
@@ -218,6 +218,5 @@
     "warnings": [
       "fewer than 5 annual financial periods are available"
     ]
-  },
-  "price_refreshed_at": "2026-08-07T23:09:27.378468+00:00"
+  }
 }

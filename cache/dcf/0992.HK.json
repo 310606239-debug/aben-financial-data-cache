@@ -11,14 +11,14 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-06-16T12:12:55.036804+00:00",
+  "fetched_at": "2026-08-09T05:41:01.199640+00:00",
   "market_data": {
     "as_of": "2026-08-07",
     "price": 28.100000381469727,
     "shares_outstanding": 12404659302,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-08-07T23:07:25.664686+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-08-09T05:41:01.199655+00:00",
     "market_cap": 348570931118.20197,
     "cash_and_short_term_investments": 5207493000,
     "total_debt": 4839041000,
@@ -38,39 +38,39 @@
   },
   "valuation_bases": {
     "revenue": {
-      "value": 69076968000,
-      "period": "2025-03-31",
-      "per_share": 5.5686308118807215
+      "value": 83074555000,
+      "period": "2026-03-31",
+      "per_share": 6.697044471556419
     },
     "earnings": {
-      "value": 1384445000,
-      "period": "2025-03-31",
-      "per_share": 0.11160685402917808
+      "value": 1911951000,
+      "period": "2026-03-31",
+      "per_share": 0.15413168176990855
     },
     "free_cash_flow": {
-      "value": -51330000,
-      "period": "2025-03-31",
-      "per_share": -0.004137961289410349
+      "value": 2164731000,
+      "period": "2026-03-31",
+      "per_share": 0.17450950866913217
     }
   },
   "annual": [
     {
       "fiscal_year": "2026-03-31",
       "source": "yfinance",
-      "revenue": null,
-      "net_income": null,
+      "revenue": 83074555000,
+      "net_income": 1911951000,
       "diluted_eps": 0.1391,
       "diluted_shares": 14731835863,
-      "operating_cash_flow": null,
-      "capital_expenditure": null,
-      "free_cash_flow": null,
-      "revenue_per_share": null,
-      "free_cash_flow_per_share": null,
-      "net_margin": null,
-      "cash_conversion": null,
+      "operating_cash_flow": 4023705000,
+      "capital_expenditure": -1858974000,
+      "free_cash_flow": 2164731000,
+      "revenue_per_share": 5.639117607103358,
+      "free_cash_flow_per_share": 0.14694237840626964,
+      "net_margin": 0.02301488103065975,
+      "cash_conversion": 1.1322105012105437,
       "year_end_price": 9.149999618530273,
       "price_to_earnings": 65.78001163573165,
-      "price_to_fcf": null
+      "price_to_fcf": 62.2693039119875
     },
     {
       "fiscal_year": "2025-03-31",
@@ -162,35 +162,35 @@
     },
     "growth": {
       "revenue": {
-        "1y": 0.2147796565912674,
-        "3y": -0.01197047487145142,
+        "1y": 0.2026375419372779,
+        "3y": 0.10276487021198366,
         "5y": null,
         "10y": null
       },
       "earnings": {
-        "1y": 0.37005124165517067,
-        "3y": -0.11974965779217572,
+        "1y": 0.3810234426069652,
+        "3y": 0.05946984715404269,
         "5y": null,
         "10y": null
       },
       "free_cash_flow": {
         "1y": null,
-        "3y": null,
+        "3y": 0.20956402253193995,
         "5y": null,
         "10y": null
       }
     },
     "averages": {
       "net_margin": {
-        "1y": 0.02004206380337944,
-        "3y": 0.021255317889887604,
-        "5y": null,
+        "1y": 0.02301488103065975,
+        "3y": 0.020275862581490767,
+        "5y": 0.023024607494350306,
         "10y": null
       },
       "cash_conversion": {
-        "1y": -0.0370762291026368,
-        "3y": 0.4804473399162806,
-        "5y": null,
+        "1y": 1.1322105012105437,
+        "3y": 0.6042298784868415,
+        "5y": 0.7898975406650979,
         "10y": null
       },
       "price_to_earnings": {
@@ -200,8 +200,8 @@
         "10y": null
       },
       "price_to_fcf": {
-        "1y": 162.5411574972034,
-        "3y": 97.52403940485151,
+        "1y": 62.2693039119875,
+        "3y": 104.97771510285152,
         "5y": null,
         "10y": null
       }
@@ -233,6 +233,5 @@
   },
   "data_quality": {
     "warnings": []
-  },
-  "price_refreshed_at": "2026-08-07T23:07:25.664692+00:00"
+  }
 }

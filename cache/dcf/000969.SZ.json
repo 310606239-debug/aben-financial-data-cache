@@ -12,14 +12,14 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-06-17T07:28:14.357020+00:00",
+  "fetched_at": "2026-08-09T05:32:31.666323+00:00",
   "market_data": {
     "as_of": "2026-08-07",
     "price": 17.450000762939453,
     "shares_outstanding": 1050519397,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-08-07T23:06:17.469623+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-08-09T05:32:31.666338+00:00",
     "market_cap": 18331564279.132694,
     "cash_and_short_term_investments": 2032154934.86,
     "total_debt": 421142725.6,
@@ -126,6 +126,24 @@
       "year_end_price": 7.75,
       "price_to_earnings": 37.67622751579971,
       "price_to_fcf": 23.498730722268597
+    },
+    {
+      "fiscal_year": "2021-12-31",
+      "source": "yfinance",
+      "revenue": null,
+      "net_income": null,
+      "diluted_eps": null,
+      "diluted_shares": null,
+      "operating_cash_flow": null,
+      "capital_expenditure": -167328042.51,
+      "free_cash_flow": null,
+      "revenue_per_share": null,
+      "free_cash_flow_per_share": null,
+      "net_margin": null,
+      "cash_conversion": null,
+      "year_end_price": 10.710000038146973,
+      "price_to_earnings": null,
+      "price_to_fcf": null
     }
   ],
   "historical_metrics": {
@@ -215,9 +233,6 @@
     "reverse_output": "implied_compound_growth_rate"
   },
   "data_quality": {
-    "warnings": [
-      "fewer than 5 annual financial periods are available"
-    ]
-  },
-  "price_refreshed_at": "2026-08-07T23:06:17.469629+00:00"
+    "warnings": []
+  }
 }
