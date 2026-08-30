@@ -13,46 +13,46 @@
     "sec-edgar",
     "yfinance"
   ],
-  "fetched_at": "2026-08-09T05:41:20.245129+00:00",
+  "fetched_at": "2026-08-30T10:11:38.426936+00:00",
   "market_data": {
-    "as_of": "2026-08-27",
-    "price": 284.67999267578125,
-    "shares_outstanding": 397262737,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-08-29T04:00:51.894061+00:00",
-    "market_cap": 113092753059.52081,
-    "cash_and_short_term_investments": 3228400000,
-    "total_debt": 4295500000,
-    "enterprise_value": 114159853059.52081
+    "as_of": "2026-08-28",
+    "price": 287.4800109863281,
+    "shares_outstanding": 397800000,
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-08-30T10:11:23.190153+00:00",
+    "market_cap": 114359548370.36133,
+    "cash_and_short_term_investments": 4230100000,
+    "total_debt": 5270800000,
+    "enterprise_value": 115400248370.36133
   },
   "ttm": {
-    "revenue": null,
-    "net_income": null,
+    "revenue": 21947500000,
+    "net_income": 4413400000,
     "diluted_eps": 10.94,
-    "free_cash_flow": 4840600000,
-    "operating_cash_flow": 5452400000,
-    "capital_expenditure": -611800000,
-    "revenue_per_share": null,
-    "free_cash_flow_per_share": 12.083374937593609,
-    "net_margin": null,
-    "cash_conversion": null
+    "free_cash_flow": 4776100000,
+    "operating_cash_flow": 5441200000,
+    "capital_expenditure": -665100000,
+    "revenue_per_share": 55.17219708396179,
+    "free_cash_flow_per_share": 12.006284565108094,
+    "net_margin": 0.20108896229638912,
+    "cash_conversion": 1.082181538043232
   },
   "valuation_bases": {
     "revenue": {
-      "value": 21947400000,
-      "period": "2026-06-30",
-      "per_share": 54.78632051922117
+      "value": 21947500000,
+      "period": "ttm",
+      "per_share": 55.17219708396179
     },
     "earnings": {
-      "value": 4413500000,
-      "period": "2026-06-30",
-      "per_share": 11.017224163754369
+      "value": 4413400000,
+      "period": "ttm",
+      "per_share": 10.94
     },
     "free_cash_flow": {
-      "value": 4840600000,
+      "value": 4776100000,
       "period": "ttm",
-      "per_share": 12.083374937593609
+      "per_share": 12.006284565108094
     }
   },
   "annual": [
@@ -65,12 +65,14 @@
       "diluted_eps": 10.94,
       "diluted_shares": 403300000,
       "revenue_per_share": 54.419538804859904,
-      "free_cash_flow_per_share": null,
+      "free_cash_flow_per_share": 11.842548970989338,
       "net_margin": 0.2010944348761129,
-      "cash_conversion": null,
+      "cash_conversion": 1.0821570182394924,
       "year_end_price": 223.9499969482422,
       "price_to_earnings": 20.470749264007512,
-      "price_to_fcf": null
+      "price_to_fcf": 18.91062451984382,
+      "capital_expenditure": -665100000,
+      "free_cash_flow": 4776100000
     },
     {
       "fiscal_year": "2025-06-30",
@@ -392,8 +394,8 @@
         "10y": 0.23551024757743022
       },
       "free_cash_flow": {
-        "1y": 0.2221634856157142,
-        "3y": 0.19936681717146265,
+        "1y": 0.08728117103376065,
+        "3y": 0.09517413628233817,
         "5y": null,
         "10y": null
       }
@@ -406,9 +408,9 @@
         "10y": 0.13432377614684385
       },
       "cash_conversion": {
-        "1y": 1.0767213275485943,
-        "3y": 1.0334381343451124,
-        "5y": null,
+        "1y": 1.0821570182394924,
+        "3y": 1.0389402588305705,
+        "5y": 1.009175623059266,
         "10y": null
       },
       "price_to_earnings": {
@@ -418,9 +420,9 @@
         "10y": 27.4056316125701
       },
       "price_to_fcf": {
-        "1y": 28.69375953411186,
-        "3y": 27.065407645416638,
-        "5y": null,
+        "1y": 18.91062451984382,
+        "3y": 24.99283068768898,
+        "5y": 26.969080985094912,
         "10y": null
       }
     }
@@ -451,6 +453,5 @@
   },
   "data_quality": {
     "warnings": []
-  },
-  "price_refreshed_at": "2026-08-29T04:00:51.894068+00:00"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-16T04:51:49.068128+00:00",
+  "generated_at": "2026-08-30T09:58:20.725156+00:00",
   "indexes": [
     {
       "id": "sp500",
@@ -55,7 +55,7 @@
     {
       "id": "csi_all",
       "name": "CSI All Share",
-      "constituent_count": 5126
+      "constituent_count": 5122
     },
     {
       "id": "star50",
@@ -15931,19 +15931,6 @@
       "market": "CN",
       "indexes": [
         "csi2000",
-        "csi_all"
-      ],
-      "enabled": true
-    },
-    {
-      "symbol": "002759.SZ",
-      "source_symbol": "002759",
-      "name": "GUANGDONG TONZE ELECTRIC CO.,LTD.",
-      "local_name": "ST天际",
-      "exchange": "SZSE",
-      "currency": "CNY",
-      "market": "CN",
-      "indexes": [
         "csi_all"
       ],
       "enabled": true
@@ -33379,7 +33366,7 @@
       "symbol": "301117.SZ",
       "source_symbol": "301117",
       "name": "Jiayuan Science and Technology Co.,Ltd.",
-      "local_name": "佳缘科技",
+      "local_name": "ST佳缘",
       "exchange": "SZSE",
       "currency": "CNY",
       "market": "CN",
@@ -36366,6 +36353,7 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "csi2000",
         "csi_all"
       ],
       "enabled": true
@@ -41931,8 +41919,8 @@
     {
       "symbol": "600388.SS",
       "source_symbol": "600388",
-      "name": "Fujian Longking Co Ltd",
-      "local_name": "龙净环保",
+      "name": "Zijin Longking Co.,Ltd.",
+      "local_name": "紫金龙净",
       "exchange": "SSE",
       "currency": "CNY",
       "market": "CN",
@@ -42373,19 +42361,6 @@
         "csi200",
         "csi300",
         "csi800",
-        "csi_all"
-      ],
-      "enabled": true
-    },
-    {
-      "symbol": "600439.SS",
-      "source_symbol": "600439",
-      "name": "Henan Rebecca Hair Products Co Ltd",
-      "local_name": "ST瑞贝卡",
-      "exchange": "SSE",
-      "currency": "CNY",
-      "market": "CN",
-      "indexes": [
         "csi_all"
       ],
       "enabled": true
@@ -43254,20 +43229,6 @@
       "market": "CN",
       "indexes": [
         "csi1000",
-        "csi_all"
-      ],
-      "enabled": true
-    },
-    {
-      "symbol": "600530.SS",
-      "source_symbol": "600530",
-      "name": "Shanghai Jiaoda Onlly Co Ltd",
-      "local_name": "ST交昂",
-      "exchange": "SSE",
-      "currency": "CNY",
-      "market": "CN",
-      "indexes": [
-        "csi2000",
         "csi_all"
       ],
       "enabled": true
@@ -45810,8 +45771,8 @@
     {
       "symbol": "600768.SS",
       "source_symbol": "600768",
-      "name": "Ningbo Fubang Jingye Group Co Ltd",
-      "local_name": "宁波富邦",
+      "name": "NINGBO FUBANG HIGH-TECH MATERIALS CO.,LTD",
+      "local_name": "富邦新材",
       "exchange": "SSE",
       "currency": "CNY",
       "market": "CN",
@@ -62004,20 +61965,6 @@
       "enabled": true
     },
     {
-      "symbol": "688089.SS",
-      "source_symbol": "688089",
-      "name": "CABIO Biotech（Wuhan） Co., Ltd.",
-      "local_name": "ST嘉必优",
-      "exchange": "SSE",
-      "currency": "CNY",
-      "market": "CN",
-      "indexes": [
-        "csi2000",
-        "csi_all"
-      ],
-      "enabled": true
-    },
-    {
       "symbol": "688090.SS",
       "source_symbol": "688090",
       "name": "Guangzhou Risong Intelligent Technology Holding Co., Ltd.",
@@ -64647,7 +64594,7 @@
     {
       "symbol": "688309.SS",
       "source_symbol": "688309",
-      "name": "NIUTECH ENVIRONMENT TECHNOLOGY CORPORATION",
+      "name": "Niutech Technology Group Co., Ltd",
       "local_name": "恒誉科技",
       "exchange": "SSE",
       "currency": "CNY",
@@ -67391,6 +67338,7 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "csi2000",
         "csi_all"
       ],
       "enabled": true
@@ -73116,21 +73064,6 @@
       "enabled": true
     },
     {
-      "symbol": "AVB",
-      "source_symbol": "AVB",
-      "name": "AvalonBay Communities",
-      "exchange": "US",
-      "currency": "USD",
-      "market": "US",
-      "sector": "Real Estate",
-      "industry": "Multi-Family Residential REITs",
-      "cik": "0000915912",
-      "indexes": [
-        "sp500"
-      ],
-      "enabled": true
-    },
-    {
       "symbol": "AVGO",
       "source_symbol": "AVGO",
       "name": "Broadcom",
@@ -74956,21 +74889,6 @@
       "sector": "Real Estate",
       "industry": "Data Center REITs",
       "cik": "0001101239",
-      "indexes": [
-        "sp500"
-      ],
-      "enabled": true
-    },
-    {
-      "symbol": "EQR",
-      "source_symbol": "EQR",
-      "name": "Equity Residential",
-      "exchange": "US",
-      "currency": "USD",
-      "market": "US",
-      "sector": "Real Estate",
-      "industry": "Multi-Family Residential REITs",
-      "cik": "0000906107",
       "indexes": [
         "sp500"
       ],
@@ -78417,6 +78335,21 @@
       "enabled": true
     },
     {
+      "symbol": "RDDT",
+      "source_symbol": "RDDT",
+      "name": "Reddit",
+      "exchange": "US",
+      "currency": "USD",
+      "market": "US",
+      "sector": "Communication Services",
+      "industry": "Interactive Media & Services",
+      "cik": "0001713445",
+      "indexes": [
+        "sp500"
+      ],
+      "enabled": true
+    },
+    {
       "symbol": "REG",
       "source_symbol": "REG",
       "name": "Regency Centers",
@@ -79695,6 +79628,21 @@
       "sector": "Materials",
       "industry": "Construction Materials",
       "cik": "0001396009",
+      "indexes": [
+        "sp500"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "VMRK",
+      "source_symbol": "VMRK",
+      "name": "Vivmark Residential",
+      "exchange": "US",
+      "currency": "USD",
+      "market": "US",
+      "sector": "Real Estate",
+      "industry": "Multi-Family Residential REITs",
+      "cik": "0000906107",
       "indexes": [
         "sp500"
       ],
