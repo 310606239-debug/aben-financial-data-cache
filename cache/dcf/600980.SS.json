@@ -12,28 +12,28 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-08-30T10:15:53.028339+00:00",
+  "fetched_at": "2026-09-13T09:55:46.901048+00:00",
   "market_data": {
     "as_of": "2026-09-11",
     "price": 18.600000381469727,
     "shares_outstanding": 193263526,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-09-12T00:35:25.248802+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-09-13T09:55:46.901061+00:00",
     "market_cap": 3594701657.3241844,
-    "cash_and_short_term_investments": 579085454.35,
-    "total_debt": 61925222.89,
-    "enterprise_value": 3077541425.8641844
+    "cash_and_short_term_investments": 764372847.18,
+    "total_debt": 208345442.33,
+    "enterprise_value": 3038674252.4741845
   },
   "ttm": {
     "revenue": null,
     "net_income": null,
     "diluted_eps": null,
-    "free_cash_flow": -17442863,
+    "free_cash_flow": 68043520.07,
     "operating_cash_flow": null,
-    "capital_expenditure": -62879350.03,
+    "capital_expenditure": -61594817.34,
     "revenue_per_share": null,
-    "free_cash_flow_per_share": -0.09216177764753257,
+    "free_cash_flow_per_share": 0.35207636680498106,
     "net_margin": null,
     "cash_conversion": null
   },
@@ -41,17 +41,17 @@
     "revenue": {
       "value": 1307072720.01,
       "period": "2025-12-31",
-      "per_share": 6.906099382350089
+      "per_share": 6.763162957142777
     },
     "earnings": {
       "value": 124559512.38,
       "period": "2025-12-31",
-      "per_share": 0.658127400521958
+      "per_share": 0.644506053252904
     },
     "free_cash_flow": {
-      "value": -17442863,
+      "value": 68043520.07,
       "period": "ttm",
-      "per_share": -0.09216177764753257
+      "per_share": 0.35207636680498106
     }
   },
   "annual": [
@@ -218,6 +218,5 @@
     "warnings": [
       "fewer than 5 annual financial periods are available"
     ]
-  },
-  "price_refreshed_at": "2026-09-12T00:35:25.248809+00:00"
+  }
 }

@@ -11,49 +11,67 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-08-30T10:02:45.108327+00:00",
+  "fetched_at": "2026-09-13T09:41:26.971638+00:00",
   "market_data": {
-    "as_of": "2026-09-10",
-    "price": 163.47999572753906,
-    "shares_outstanding": 163054698,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-09-12T00:39:32.296618+00:00",
-    "market_cap": 26656181332.395172,
-    "cash_and_short_term_investments": 3539107000,
-    "total_debt": 1861184000,
-    "enterprise_value": 24978258332.395172
+    "as_of": "2026-09-11",
+    "price": 164.5399932861328,
+    "shares_outstanding": 163055000,
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-09-13T09:41:26.971650+00:00",
+    "market_cap": 26829068605.270386,
+    "cash_and_short_term_investments": 3474151000,
+    "total_debt": 1855824000,
+    "enterprise_value": 25210741605.270386
   },
   "ttm": {
-    "revenue": 3173564000,
-    "net_income": -77388000,
-    "diluted_eps": -0.48,
-    "free_cash_flow": 890300000,
-    "operating_cash_flow": 1100973000,
-    "capital_expenditure": -210673000,
-    "revenue_per_share": 19.625032465524704,
-    "free_cash_flow_per_share": 5.505534598973471,
-    "net_margin": -0.024385202252105203,
-    "cash_conversion": -11.504367602212229
+    "revenue": 3352523000,
+    "net_income": -63179000,
+    "diluted_eps": -0.39,
+    "free_cash_flow": 779143000,
+    "operating_cash_flow": 1129654000,
+    "capital_expenditure": -350511000,
+    "revenue_per_share": 20.560688111373462,
+    "free_cash_flow_per_share": 4.7784060593051425,
+    "net_margin": -0.018845210010490606,
+    "cash_conversion": -12.332309786479685
   },
   "valuation_bases": {
     "revenue": {
-      "value": 3173564000,
+      "value": 3352523000,
       "period": "ttm",
-      "per_share": 19.625032465524704
+      "per_share": 20.560688111373462
     },
     "earnings": {
-      "value": -77388000,
+      "value": -63179000,
       "period": "ttm",
-      "per_share": -0.48
+      "per_share": -0.39
     },
     "free_cash_flow": {
-      "value": 890300000,
+      "value": 779143000,
       "period": "ttm",
-      "per_share": 5.505534598973471
+      "per_share": 4.7784060593051425
     }
   },
   "annual": [
+    {
+      "fiscal_year": "2026-07-31",
+      "source": "yfinance",
+      "revenue": 3352523000,
+      "net_income": -63179000,
+      "diluted_eps": -0.39,
+      "diluted_shares": 160219000,
+      "operating_cash_flow": 1129654000,
+      "capital_expenditure": -350511000,
+      "free_cash_flow": 779143000,
+      "revenue_per_share": 20.924628165198882,
+      "free_cash_flow_per_share": 4.862987535810359,
+      "net_margin": -0.018845210010490606,
+      "cash_conversion": -12.332309786479685,
+      "year_end_price": 151.1999969482422,
+      "price_to_earnings": -387.69229986728766,
+      "price_to_fcf": 31.091997632078343
+    },
     {
       "fiscal_year": "2025-07-31",
       "source": "yfinance",
@@ -144,8 +162,8 @@
     },
     "growth": {
       "revenue": {
-        "1y": 0.23311687443000206,
-        "3y": 0.3481497314980284,
+        "1y": 0.25416340112565305,
+        "3y": 0.27514100805675046,
         "5y": null,
         "10y": null
       },
@@ -156,35 +174,35 @@
         "10y": null
       },
       "free_cash_flow": {
-        "1y": 0.24231643730233343,
-        "3y": 0.4645529841277256,
+        "1y": 0.07217628352000083,
+        "3y": 0.3267490917183482,
         "5y": null,
         "10y": null
       }
     },
     "averages": {
       "net_margin": {
-        "1y": -0.015516728610628423,
-        "3y": -0.05575676124946854,
-        "5y": null,
+        "1y": -0.018845210010490606,
+        "3y": -0.020327303029493093,
+        "5y": -0.10877164469264158,
         "10y": null
       },
       "cash_conversion": {
-        "1y": -17.519962389700563,
-        "3y": -9.768511559127619,
-        "5y": null,
+        "1y": -12.332309786479685,
+        "3y": -13.329666575391684,
+        "5y": -8.446116184702877,
         "10y": null
       },
       "price_to_earnings": {
-        "1y": -1057.6296205873841,
-        "3y": -544.0195258180285,
-        "5y": null,
+        "1y": -387.69229986728766,
+        "3y": -635.0645769921689,
+        "5y": -415.14584315803586,
         "10y": null
       },
       "price_to_fcf": {
-        "1y": 60.67432308146234,
-        "3y": 58.73872725284198,
-        "5y": null,
+        "1y": 31.091997632078343,
+        "3y": 45.87683238703371,
+        "5y": 60.349795195481235,
         "10y": null
       }
     }
@@ -214,9 +232,6 @@
     "reverse_output": "implied_compound_growth_rate"
   },
   "data_quality": {
-    "warnings": [
-      "fewer than 5 annual financial periods are available"
-    ]
-  },
-  "price_refreshed_at": "2026-09-12T00:39:32.296625+00:00"
+    "warnings": []
+  }
 }

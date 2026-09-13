@@ -12,28 +12,28 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-08-30T10:03:11.890437+00:00",
+  "fetched_at": "2026-09-13T09:42:41.365727+00:00",
   "market_data": {
     "as_of": "2026-09-11",
     "price": 5.380000114440918,
     "shares_outstanding": 1915472817,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-09-12T00:29:10.530271+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-09-13T09:42:41.365741+00:00",
     "market_cap": 10305243974.668468,
-    "cash_and_short_term_investments": 925835904.95,
-    "total_debt": 68143302.43,
-    "enterprise_value": 9447551372.148468
+    "cash_and_short_term_investments": 535163291.46,
+    "total_debt": 64642260,
+    "enterprise_value": 9834722943.20847
   },
   "ttm": {
     "revenue": null,
     "net_income": null,
     "diluted_eps": null,
-    "free_cash_flow": 52157.19999998808,
+    "free_cash_flow": -101238371.97000003,
     "operating_cash_flow": null,
-    "capital_expenditure": -26584844.779999997,
+    "capital_expenditure": -33972162.61,
     "revenue_per_share": null,
-    "free_cash_flow_per_share": 2.7234891825433307e-05,
+    "free_cash_flow_per_share": -0.05285294109710147,
     "net_margin": null,
     "cash_conversion": null
   },
@@ -41,17 +41,17 @@
     "revenue": {
       "value": 2592079274.11,
       "period": "2025-12-31",
-      "per_share": 1.3535043797088355
+      "per_share": 1.353232085104552
     },
     "earnings": {
       "value": 300061092.91,
       "period": "2025-12-31",
-      "per_share": 0.15668270931773584
+      "per_share": 0.15665118828465213
     },
     "free_cash_flow": {
-      "value": 52157.19999998808,
+      "value": -101238371.97000003,
       "period": "ttm",
-      "per_share": 2.7234891825433307e-05
+      "per_share": -0.05285294109710147
     }
   },
   "annual": [
@@ -218,6 +218,5 @@
     "warnings": [
       "fewer than 5 annual financial periods are available"
     ]
-  },
-  "price_refreshed_at": "2026-09-12T00:29:10.530278+00:00"
+  }
 }

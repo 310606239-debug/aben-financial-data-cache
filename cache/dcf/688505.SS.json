@@ -12,18 +12,18 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-08-30T10:04:05.065277+00:00",
+  "fetched_at": "2026-09-13T09:43:57.932740+00:00",
   "market_data": {
     "as_of": "2026-09-11",
     "price": 7.5,
     "shares_outstanding": 1043000000,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-09-12T00:38:05.241976+00:00",
-    "market_cap": 7822500000.0,
-    "cash_and_short_term_investments": 1147079542,
-    "total_debt": 14691899,
-    "enterprise_value": 6690112357.0
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-09-13T09:43:57.932752+00:00",
+    "market_cap": 7822500000,
+    "cash_and_short_term_investments": 1223004106,
+    "total_debt": 11987332,
+    "enterprise_value": 6611483226
   },
   "ttm": {
     "revenue": null,
@@ -60,18 +60,18 @@
       "source": "yfinance",
       "revenue": 685797316,
       "net_income": -157439498,
-      "diluted_eps": null,
-      "diluted_shares": null,
+      "diluted_eps": -0.15,
+      "diluted_shares": 1036572100,
       "operating_cash_flow": 141398255,
       "capital_expenditure": -32365829,
       "free_cash_flow": 109032426,
-      "revenue_per_share": null,
-      "free_cash_flow_per_share": null,
+      "revenue_per_share": 0.661601171785349,
+      "free_cash_flow_per_share": 0.10518556885719768,
       "net_margin": -0.2295714700639044,
       "cash_conversion": -0.6925354017579503,
       "year_end_price": 8.300000190734863,
-      "price_to_earnings": null,
-      "price_to_fcf": null
+      "price_to_earnings": -55.33333460489909,
+      "price_to_fcf": 78.90816469323023
     },
     {
       "fiscal_year": "2024-12-31",
@@ -195,14 +195,14 @@
         "10y": null
       },
       "price_to_earnings": {
-        "1y": 191.75000190734863,
-        "3y": 113.2966202733678,
-        "5y": null,
+        "1y": -55.33333460489909,
+        "3y": 73.44191801668417,
+        "5y": 71.01130562451058,
         "10y": null
       },
       "price_to_fcf": {
-        "1y": -134.33983803138742,
-        "3y": -121.78116356232395,
+        "1y": 78.90816469323023,
+        "3y": -132.2935514852965,
         "5y": null,
         "10y": null
       }
@@ -234,6 +234,5 @@
   },
   "data_quality": {
     "warnings": []
-  },
-  "price_refreshed_at": "2026-09-12T00:38:05.241983+00:00"
+  }
 }

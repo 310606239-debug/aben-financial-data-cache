@@ -12,28 +12,28 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-08-30T10:03:41.212440+00:00",
+  "fetched_at": "2026-09-13T09:43:02.595458+00:00",
   "market_data": {
     "as_of": "2026-09-11",
     "price": 11.300000190734863,
     "shares_outstanding": 488710536,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-09-12T00:31:06.328773+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-09-13T09:43:02.595472+00:00",
     "market_cap": 5522429150.014137,
-    "cash_and_short_term_investments": 417572253.34,
-    "total_debt": 202182.33,
-    "enterprise_value": 5105059079.004137
+    "cash_and_short_term_investments": 451034308.43,
+    "total_debt": 2520460.23,
+    "enterprise_value": 5073915301.8141365
   },
   "ttm": {
     "revenue": null,
     "net_income": null,
     "diluted_eps": null,
-    "free_cash_flow": null,
+    "free_cash_flow": 32914917.710000005,
     "operating_cash_flow": null,
-    "capital_expenditure": null,
+    "capital_expenditure": -52368287.81,
     "revenue_per_share": null,
-    "free_cash_flow_per_share": null,
+    "free_cash_flow_per_share": 0.06735053837677034,
     "net_margin": null,
     "cash_conversion": null
   },
@@ -41,17 +41,17 @@
     "revenue": {
       "value": 553692697.6,
       "period": "2024-12-31",
-      "per_share": 1.140845160779655
+      "per_share": 1.132966565713656
     },
     "earnings": {
       "value": 76972845.35,
       "period": "2024-12-31",
-      "per_share": 0.15859717585155353
+      "per_share": 0.1575019151009259
     },
     "free_cash_flow": {
-      "value": 116849034.49,
-      "period": "2024-12-31",
-      "per_share": 0.24075928058562765
+      "value": 32914917.710000005,
+      "period": "ttm",
+      "per_share": 0.06735053837677034
     }
   },
   "annual": [
@@ -234,6 +234,5 @@
   },
   "data_quality": {
     "warnings": []
-  },
-  "price_refreshed_at": "2026-09-12T00:31:06.328780+00:00"
+  }
 }

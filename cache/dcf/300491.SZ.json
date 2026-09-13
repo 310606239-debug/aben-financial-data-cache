@@ -12,28 +12,28 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-08-30T10:06:13.915458+00:00",
+  "fetched_at": "2026-09-13T09:45:48.485414+00:00",
   "market_data": {
     "as_of": "2026-09-11",
     "price": 32.13999938964844,
     "shares_outstanding": 177666749,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-09-12T00:31:43.887165+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-09-13T09:45:48.485428+00:00",
     "market_cap": 5710209204.420822,
-    "cash_and_short_term_investments": 320465486.54,
-    "total_debt": 274537712.16,
-    "enterprise_value": 5664281430.040822
+    "cash_and_short_term_investments": 831992660.79,
+    "total_debt": 858035874.89,
+    "enterprise_value": 5736252418.520823
   },
   "ttm": {
     "revenue": null,
     "net_income": null,
     "diluted_eps": null,
-    "free_cash_flow": 73626619.14,
+    "free_cash_flow": -57362188.79,
     "operating_cash_flow": null,
-    "capital_expenditure": -82761504.06,
+    "capital_expenditure": -191393966.48,
     "revenue_per_share": null,
-    "free_cash_flow_per_share": 0.41911139840727735,
+    "free_cash_flow_per_share": -0.32286395238762433,
     "net_margin": null,
     "cash_conversion": null
   },
@@ -41,17 +41,17 @@
     "revenue": {
       "value": 1557155057.75,
       "period": "2025-12-31",
-      "per_share": 8.863933199888162
+      "per_share": 8.764470935132605
     },
     "earnings": {
       "value": 40153273.05,
       "period": "2025-12-31",
-      "per_share": 0.22856807246052155
+      "per_share": 0.22600330830615917
     },
     "free_cash_flow": {
-      "value": 73626619.14,
+      "value": -57362188.79,
       "period": "ttm",
-      "per_share": 0.41911139840727735
+      "per_share": -0.32286395238762433
     }
   },
   "annual": [
@@ -218,6 +218,5 @@
     "warnings": [
       "fewer than 5 annual financial periods are available"
     ]
-  },
-  "price_refreshed_at": "2026-09-12T00:31:43.887172+00:00"
+  }
 }
