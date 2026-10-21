@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-21T01:00:12.258186+00:00",
+  "generated_at": "2026-10-21T03:18:38.221869+00:00",
   "summary": {
-    "universe_count": 5672,
-    "cached_count": 5431,
+    "universe_count": 5669,
+    "cached_count": 5428,
     "missing_count": 241,
     "error_count": 241,
-    "coverage": 0.9575105782792666
+    "coverage": 0.9574880931381196
   },
   "by_market": {
     "CN": {
-      "universe": 5126,
-      "cached": 4885,
+      "universe": 5122,
+      "cached": 4881,
       "missing": 241,
       "errors": 241
     },
@@ -22,8 +22,8 @@
       "errors": 0
     },
     "US": {
-      "universe": 516,
-      "cached": 516,
+      "universe": 517,
+      "cached": 517,
       "missing": 0,
       "errors": 0
     }
@@ -78,8 +78,8 @@
       "errors": 0
     },
     "csi_all": {
-      "universe": 5121,
-      "cached": 4880,
+      "universe": 5117,
+      "cached": 4876,
       "missing": 241,
       "errors": 241
     },
@@ -121,7 +121,8 @@
     }
   },
   "quality_counts": {
-    "short_annual_history": 4817
+    "missing_shares": 1,
+    "short_annual_history": 4814
   },
   "samples": {
     "missing": [
@@ -3793,6 +3794,16 @@
       }
     ],
     "quality": {
+      "missing_shares": [
+        {
+          "symbol": "VYLR",
+          "name": "Vylor",
+          "market": "US",
+          "indexes": [
+            "sp500"
+          ]
+        }
+      ],
       "short_annual_history": [
         {
           "symbol": "000001.SZ",
@@ -5557,7 +5568,7 @@
         },
         {
           "symbol": "000708.SZ",
-          "name": "CITIC Pacific Special Steel Group Co., Ltd",
+          "name": "CITIC SPECIAL STEEL GROUP CO.,LTD",
           "market": "CN",
           "indexes": [
             "csi200",

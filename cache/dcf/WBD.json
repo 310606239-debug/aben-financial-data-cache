@@ -2,25 +2,23 @@
   "schema_version": 3,
   "symbol": "WBD",
   "name": "Warner Bros. Discovery",
-  "exchange": "US",
+  "exchange": "NASDAQ",
   "currency": "USD",
   "market": "US",
   "indexes": [
-    "qqq",
-    "sp500"
+    "qqq"
   ],
   "sources": [
-    "sec-edgar",
     "yfinance"
   ],
-  "fetched_at": "2026-10-04T10:53:58.934990+00:00",
+  "fetched_at": "2026-10-21T03:10:05.470218+00:00",
   "market_data": {
     "as_of": "2026-10-05",
     "price": 30.950000762939453,
     "shares_outstanding": 2507136702,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-10-13T03:17:14.304042+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-10-21T03:10:05.470231+00:00",
     "market_cap": 77595882839.69351,
     "cash_and_short_term_investments": 3369000000,
     "total_debt": 32023000000,
@@ -58,7 +56,7 @@
   "annual": [
     {
       "fiscal_year": "2025-12-31",
-      "source": "sec-edgar",
+      "source": "yfinance",
       "revenue": 37296000000,
       "net_income": 727000000,
       "diluted_eps": 0.29,
@@ -76,7 +74,7 @@
     },
     {
       "fiscal_year": "2024-12-31",
-      "source": "sec-edgar",
+      "source": "yfinance",
       "revenue": 39321000000,
       "net_income": -11311000000,
       "diluted_eps": -4.62,
@@ -94,7 +92,7 @@
     },
     {
       "fiscal_year": "2023-12-31",
-      "source": "sec-edgar",
+      "source": "yfinance",
       "revenue": 41321000000,
       "net_income": -3126000000,
       "diluted_eps": -1.28,
@@ -112,7 +110,7 @@
     },
     {
       "fiscal_year": "2022-12-31",
-      "source": "sec-edgar",
+      "source": "yfinance",
       "revenue": 33817000000,
       "net_income": -7371000000,
       "diluted_eps": -3.82,
@@ -466,6 +464,5 @@
   },
   "data_quality": {
     "warnings": []
-  },
-  "price_refreshed_at": "2026-10-13T03:17:14.304049+00:00"
+  }
 }

@@ -6,24 +6,25 @@
   "currency": "CNY",
   "market": "CN",
   "indexes": [
-    "csi1000",
+    "csi500",
+    "csi800",
     "csi_all"
   ],
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-10-04T10:43:31.909080+00:00",
+  "fetched_at": "2026-10-21T03:01:24.874919+00:00",
   "market_data": {
-    "as_of": "2026-10-20",
-    "price": 162.97999572753906,
-    "shares_outstanding": 386696373,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-10-21T00:55:56.069556+00:00",
-    "market_cap": 63023773219.39485,
+    "as_of": "2026-10-21",
+    "price": 173,
+    "shares_outstanding": 368250373,
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-10-21T03:01:24.874930+00:00",
+    "market_cap": 63707314529,
     "cash_and_short_term_investments": 3453753728.62,
     "total_debt": 1581390766.04,
-    "enterprise_value": 61151410256.81485
+    "enterprise_value": 61834951566.42
   },
   "ttm": {
     "revenue": 5310056726.47,
@@ -218,6 +219,5 @@
     "warnings": [
       "fewer than 5 annual financial periods are available"
     ]
-  },
-  "price_refreshed_at": "2026-10-21T00:55:56.069561+00:00"
+  }
 }

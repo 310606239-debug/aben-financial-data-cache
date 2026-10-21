@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-04T10:37:26.788604+00:00",
+  "generated_at": "2026-10-21T02:54:58.887803+00:00",
   "indexes": [
     {
       "id": "sp500",
@@ -55,7 +55,7 @@
     {
       "id": "csi_all",
       "name": "CSI All Share",
-      "constituent_count": 5121
+      "constituent_count": 5117
     },
     {
       "id": "star50",
@@ -2934,7 +2934,7 @@
     {
       "symbol": "000708.SZ",
       "source_symbol": "000708",
-      "name": "CITIC Pacific Special Steel Group Co., Ltd",
+      "name": "CITIC SPECIAL STEEL GROUP CO.,LTD",
       "local_name": "中信特钢",
       "exchange": "SZSE",
       "currency": "CNY",
@@ -5935,6 +5935,7 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "csi2000",
         "csi_all"
       ],
       "enabled": true
@@ -10071,6 +10072,7 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "csi2000",
         "csi_all"
       ],
       "enabled": true
@@ -10508,6 +10510,9 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
+        "csi200",
+        "csi300",
+        "csi800",
         "csi_all"
       ],
       "enabled": true
@@ -15766,19 +15771,6 @@
       "market": "CN",
       "indexes": [
         "csi2000",
-        "csi_all"
-      ],
-      "enabled": true
-    },
-    {
-      "symbol": "002743.SZ",
-      "source_symbol": "002743",
-      "name": "Anhui Fuhuang Steel Structure Co., Ltd.",
-      "local_name": "ST富煌",
-      "exchange": "SZSE",
-      "currency": "CNY",
-      "market": "CN",
-      "indexes": [
         "csi_all"
       ],
       "enabled": true
@@ -22723,7 +22715,7 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
-        "csi2000",
+        "csi1000",
         "csi_all"
       ],
       "enabled": true
@@ -35362,7 +35354,8 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
-        "csi1000",
+        "csi500",
+        "csi800",
         "csi_all"
       ],
       "enabled": true
@@ -41657,21 +41650,6 @@
       "indexes": [
         "csi200",
         "csi300",
-        "csi800",
-        "csi_all"
-      ],
-      "enabled": true
-    },
-    {
-      "symbol": "600363.SS",
-      "source_symbol": "600363",
-      "name": "Jiangxi Lianchuang Optoelectronic Science and Technology Co Ltd",
-      "local_name": "ST联光",
-      "exchange": "SSE",
-      "currency": "CNY",
-      "market": "CN",
-      "indexes": [
-        "csi500",
         "csi800",
         "csi_all"
       ],
@@ -48387,22 +48365,6 @@
       "enabled": true
     },
     {
-      "symbol": "601059.SS",
-      "source_symbol": "601059",
-      "name": "CINDA SECURITIES CO., LTD.",
-      "local_name": "信达证券",
-      "exchange": "SSE",
-      "currency": "CNY",
-      "market": "CN",
-      "indexes": [
-        "csi200",
-        "csi300",
-        "csi800",
-        "csi_all"
-      ],
-      "enabled": true
-    },
-    {
       "symbol": "601061.SS",
       "source_symbol": "601061",
       "name": "CITIC Metal Co., Ltd",
@@ -49075,21 +49037,6 @@
       "market": "CN",
       "indexes": [
         "csi2000",
-        "csi_all"
-      ],
-      "enabled": true
-    },
-    {
-      "symbol": "601198.SS",
-      "source_symbol": "601198",
-      "name": "DONGXING SECURITIES CO., LTD.",
-      "local_name": "东兴证券",
-      "exchange": "SSE",
-      "currency": "CNY",
-      "market": "CN",
-      "indexes": [
-        "csi500",
-        "csi800",
         "csi_all"
       ],
       "enabled": true
@@ -52334,7 +52281,8 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
-        "csi1000",
+        "csi500",
+        "csi800",
         "csi_all"
       ],
       "enabled": true
@@ -56566,7 +56514,7 @@
       "symbol": "603608.SS",
       "source_symbol": "603608",
       "name": "TOP SCORE FASHION CO.,LTD.",
-      "local_name": "天创时尚",
+      "local_name": "天创股份",
       "exchange": "SSE",
       "currency": "CNY",
       "market": "CN",
@@ -57123,7 +57071,7 @@
       "currency": "CNY",
       "market": "CN",
       "indexes": [
-        "csi2000",
+        "csi1000",
         "csi_all"
       ],
       "enabled": true
@@ -74271,21 +74219,6 @@
       "enabled": true
     },
     {
-      "symbol": "CTVA",
-      "source_symbol": "CTVA",
-      "name": "Corteva",
-      "exchange": "US",
-      "currency": "USD",
-      "market": "US",
-      "sector": "Materials",
-      "industry": "Fertilizers & Agricultural Chemicals",
-      "cik": "0001755672",
-      "indexes": [
-        "sp500"
-      ],
-      "enabled": true
-    },
-    {
       "symbol": "CVNA",
       "source_symbol": "CVNA",
       "name": "Carvana",
@@ -77009,7 +76942,7 @@
     {
       "symbol": "MCK",
       "source_symbol": "MCK",
-      "name": "McKesson Corporation",
+      "name": "McKesson",
       "exchange": "US",
       "currency": "USD",
       "market": "US",
@@ -78266,21 +78199,6 @@
       "enabled": true
     },
     {
-      "symbol": "PSKY",
-      "source_symbol": "PSKY",
-      "name": "Paramount Skydance Corporation",
-      "exchange": "US",
-      "currency": "USD",
-      "market": "US",
-      "sector": "Communication Services",
-      "industry": "Movies & Entertainment",
-      "cik": "0002041610",
-      "indexes": [
-        "sp500"
-      ],
-      "enabled": true
-    },
-    {
       "symbol": "PSX",
       "source_symbol": "PSX",
       "name": "Phillips 66",
@@ -78685,6 +78603,21 @@
       "sector": "Consumer Staples",
       "industry": "Packaged Foods & Meats",
       "cik": "0000091419",
+      "indexes": [
+        "sp500"
+      ],
+      "enabled": true
+    },
+    {
+      "symbol": "SKYD",
+      "source_symbol": "SKYD",
+      "name": "Skydance Corporation",
+      "exchange": "US",
+      "currency": "USD",
+      "market": "US",
+      "sector": "Communication Services",
+      "industry": "Movies & Entertainment",
+      "cik": "0002041610",
       "indexes": [
         "sp500"
       ],
@@ -79371,6 +79304,21 @@
       "enabled": true
     },
     {
+      "symbol": "TWLO",
+      "source_symbol": "TWLO",
+      "name": "Twilio",
+      "exchange": "US",
+      "currency": "USD",
+      "market": "US",
+      "sector": "Information Technology",
+      "industry": "Systems Software",
+      "cik": "0001447669",
+      "indexes": [
+        "sp500"
+      ],
+      "enabled": true
+    },
+    {
       "symbol": "TXN",
       "source_symbol": "TXN",
       "name": "Texas Instruments",
@@ -79779,6 +79727,21 @@
       "enabled": true
     },
     {
+      "symbol": "VYLR",
+      "source_symbol": "VYLR",
+      "name": "Vylor",
+      "exchange": "US",
+      "currency": "USD",
+      "market": "US",
+      "sector": "Consumer Staples",
+      "industry": "Agricultural Products & Services",
+      "cik": "0002128626",
+      "indexes": [
+        "sp500"
+      ],
+      "enabled": true
+    },
+    {
       "symbol": "VZ",
       "source_symbol": "VZ",
       "name": "Verizon",
@@ -79827,15 +79790,13 @@
       "symbol": "WBD",
       "source_symbol": "WBD",
       "name": "Warner Bros. Discovery",
-      "exchange": "US",
+      "exchange": "NASDAQ",
       "currency": "USD",
       "market": "US",
-      "sector": "Communication Services",
-      "industry": "Broadcasting",
-      "cik": "0001437107",
+      "sector": "Consumer Discretionary",
+      "industry": "Miscellaneous Amusement & Recreation Services",
       "indexes": [
-        "qqq",
-        "sp500"
+        "qqq"
       ],
       "enabled": true
     },
