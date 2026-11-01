@@ -12,46 +12,46 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-10-21T03:11:17.965072+00:00",
+  "fetched_at": "2026-11-01T11:38:40.854101+00:00",
   "market_data": {
     "as_of": "2026-10-30",
     "price": 22.229999542236328,
     "shares_outstanding": 309697091,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-10-31T01:51:27.450283+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-11-01T11:38:40.854115+00:00",
     "market_cap": 6884566191.161922,
-    "cash_and_short_term_investments": 1158775904.85,
-    "total_debt": 3244377607.17,
-    "enterprise_value": 8970167893.481922
+    "cash_and_short_term_investments": 505043788.53,
+    "total_debt": 3091611229.14,
+    "enterprise_value": 9471133631.771921
   },
   "ttm": {
-    "revenue": 7397613405.4800005,
-    "net_income": 199228624.43,
+    "revenue": 7296937428.97,
+    "net_income": -34502098.77000001,
     "diluted_eps": null,
-    "free_cash_flow": -1235716879.98,
+    "free_cash_flow": -1407497615.71,
     "operating_cash_flow": null,
-    "capital_expenditure": -1010273626.68,
-    "revenue_per_share": 23.886609272284062,
-    "free_cash_flow_per_share": -3.9900822961879228,
-    "net_margin": 0.0269314728291175,
-    "cash_conversion": -6.2025067106467695
+    "capital_expenditure": -542347598.65,
+    "revenue_per_share": 23.561530414794888,
+    "free_cash_flow_per_share": -4.544755687453326,
+    "net_margin": -0.004728298564411585,
+    "cash_conversion": 40.79455064727355
   },
   "valuation_bases": {
     "revenue": {
-      "value": 7397613405.4800005,
+      "value": 7296937428.97,
       "period": "ttm",
-      "per_share": 23.886609272284062
+      "per_share": 23.561530414794888
     },
     "earnings": {
-      "value": 199228624.43,
+      "value": -34502098.77000001,
       "period": "ttm",
-      "per_share": 0.6433015685962643
+      "per_share": -0.11140595043561456
     },
     "free_cash_flow": {
-      "value": -1235716879.98,
+      "value": -1407497615.71,
       "period": "ttm",
-      "per_share": -3.9900822961879228
+      "per_share": -4.544755687453326
     }
   },
   "annual": [
@@ -218,6 +218,5 @@
     "warnings": [
       "fewer than 5 annual financial periods are available"
     ]
-  },
-  "price_refreshed_at": "2026-10-31T01:51:27.450288+00:00"
+  }
 }

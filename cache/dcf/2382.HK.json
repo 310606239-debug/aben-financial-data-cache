@@ -11,14 +11,14 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-10-21T03:14:33.236608+00:00",
+  "fetched_at": "2026-11-01T11:41:17.392795+00:00",
   "market_data": {
     "as_of": "2026-10-30",
     "price": 63.29999923706055,
     "shares_outstanding": 1074174800,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-10-31T01:49:17.184956+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-11-01T11:41:17.392811+00:00",
     "market_cap": 67995264020.469666,
     "cash_and_short_term_investments": 20198208000,
     "total_debt": 6051542000,
@@ -59,18 +59,18 @@
       "source": "yfinance",
       "revenue": 43229126000,
       "net_income": 4639107000,
-      "diluted_eps": null,
-      "diluted_shares": null,
+      "diluted_eps": 4.2479,
+      "diluted_shares": 1092083000,
       "operating_cash_flow": 6079499000,
       "capital_expenditure": -2930958000,
       "free_cash_flow": 3148541000,
-      "revenue_per_share": null,
-      "free_cash_flow_per_share": null,
+      "revenue_per_share": 39.584103039787266,
+      "free_cash_flow_per_share": 2.8830601703350385,
       "net_margin": 0.10731438336273558,
       "cash_conversion": 0.6786954903174253,
       "year_end_price": 65.55000305175781,
-      "price_to_earnings": null,
-      "price_to_fcf": null
+      "price_to_earnings": 15.431154935793645,
+      "price_to_fcf": 22.736259106288543
     },
     {
       "fiscal_year": "2024-12-31",
@@ -194,14 +194,14 @@
         "10y": null
       },
       "price_to_earnings": {
-        "1y": 27.79570821602344,
-        "3y": 46.79264489092748,
-        "5y": null,
+        "1y": 15.431154935793645,
+        "3y": 37.877767022357354,
+        "5y": 41.979268236610736,
         "10y": null
       },
       "price_to_fcf": {
-        "1y": 62.785605185827,
-        "3y": 174.90331151203793,
+        "1y": 22.736259106288543,
+        "3y": 174.54259868439408,
         "5y": null,
         "10y": null
       }
@@ -233,6 +233,5 @@
   },
   "data_quality": {
     "warnings": []
-  },
-  "price_refreshed_at": "2026-10-31T01:49:17.184961+00:00"
+  }
 }

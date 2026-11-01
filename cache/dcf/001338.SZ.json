@@ -12,41 +12,41 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-10-21T03:06:59.154800+00:00",
+  "fetched_at": "2026-11-01T11:33:28.778801+00:00",
   "market_data": {
     "as_of": "2026-10-30",
     "price": 7.949999809265137,
     "shares_outstanding": 501730834,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-10-31T01:46:00.267994+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-11-01T11:33:28.778812+00:00",
     "market_cap": 3988760034.602438,
-    "cash_and_short_term_investments": 1482060894.33,
-    "total_debt": 740664917.37,
-    "enterprise_value": 3247364057.642438
+    "cash_and_short_term_investments": 1509170371.23,
+    "total_debt": 699931639.44,
+    "enterprise_value": 3179521302.8124385
   },
   "ttm": {
-    "revenue": null,
-    "net_income": null,
+    "revenue": 3542613208.43,
+    "net_income": 40379893.11,
     "diluted_eps": null,
     "free_cash_flow": null,
     "operating_cash_flow": null,
     "capital_expenditure": null,
-    "revenue_per_share": null,
+    "revenue_per_share": 7.060784325704806,
     "free_cash_flow_per_share": null,
-    "net_margin": null,
+    "net_margin": 0.011398335278012298,
     "cash_conversion": null
   },
   "valuation_bases": {
     "revenue": {
-      "value": 3927033255.84,
-      "period": "2025-12-31",
-      "per_share": 7.826972132711302
+      "value": 3542613208.43,
+      "period": "ttm",
+      "per_share": 7.060784325704806
     },
     "earnings": {
-      "value": 236704045.15,
-      "period": "2025-12-31",
-      "per_share": 0.471774962010806
+      "value": 40379893.11,
+      "period": "ttm",
+      "per_share": 0.08048118707011737
     },
     "free_cash_flow": {
       "value": 1403525498.31,
@@ -218,6 +218,5 @@
     "warnings": [
       "fewer than 5 annual financial periods are available"
     ]
-  },
-  "price_refreshed_at": "2026-10-31T01:46:00.267998+00:00"
+  }
 }

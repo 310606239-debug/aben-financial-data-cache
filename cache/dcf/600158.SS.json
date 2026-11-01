@@ -12,30 +12,30 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-10-21T03:14:42.069637+00:00",
+  "fetched_at": "2026-11-01T11:41:19.399973+00:00",
   "market_data": {
     "as_of": "2026-10-30",
     "price": 6.550000190734863,
     "shares_outstanding": 959513067,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-10-31T01:54:45.249429+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-11-01T11:41:19.399987+00:00",
     "market_cap": 6284810771.862594,
-    "cash_and_short_term_investments": 1860999804.27,
-    "total_debt": 185884632.88,
-    "enterprise_value": 4609695600.472593
+    "cash_and_short_term_investments": 1839313855.92,
+    "total_debt": 215001866.32,
+    "enterprise_value": 4660498782.262593
   },
   "ttm": {
     "revenue": null,
-    "net_income": -195753855.62,
+    "net_income": -197851906.03,
     "diluted_eps": null,
-    "free_cash_flow": 189758406.79999998,
+    "free_cash_flow": -100087142.33000004,
     "operating_cash_flow": null,
-    "capital_expenditure": -47372850.45,
+    "capital_expenditure": -55085984.62,
     "revenue_per_share": null,
-    "free_cash_flow_per_share": 0.19776531797872846,
+    "free_cash_flow_per_share": -0.10431034841758965,
     "net_margin": null,
-    "cash_conversion": -0.9693725122245436
+    "cash_conversion": 0.5058689822013843
   },
   "valuation_bases": {
     "revenue": {
@@ -44,14 +44,14 @@
       "per_share": 2.2354075681701997
     },
     "earnings": {
-      "value": -195753855.62,
+      "value": -197851906.03,
       "period": "ttm",
-      "per_share": -0.20401374650586182
+      "per_share": -0.2062003247632687
     },
     "free_cash_flow": {
-      "value": 189758406.79999998,
+      "value": -100087142.33000004,
       "period": "ttm",
-      "per_share": 0.19776531797872846
+      "per_share": -0.10431034841758965
     }
   },
   "annual": [
@@ -218,6 +218,5 @@
     "warnings": [
       "fewer than 5 annual financial periods are available"
     ]
-  },
-  "price_refreshed_at": "2026-10-31T01:54:45.249434+00:00"
+  }
 }
