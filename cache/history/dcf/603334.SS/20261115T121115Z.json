@@ -1,0 +1,160 @@
+{
+  "schema_version": 3,
+  "symbol": "603334.SS",
+  "name": "SUZHOU FENGBEI BIOTECH STOCK CO., LTD.",
+  "exchange": "SSE",
+  "currency": "CNY",
+  "market": "CN",
+  "indexes": [
+    "csi2000",
+    "csi_all"
+  ],
+  "sources": [
+    "yfinance"
+  ],
+  "fetched_at": "2026-11-01T11:28:42.822015+00:00",
+  "market_data": {
+    "as_of": "2026-11-13",
+    "price": 25.520000457763672,
+    "shares_outstanding": 143500000,
+    "shares_source": "yfinance.fast_info",
+    "shares_kind": "current_shares_outstanding",
+    "shares_refreshed_at": "2026-11-14T02:43:33.820718+00:00",
+    "market_cap": 3662120065.689087,
+    "cash_and_short_term_investments": 704789800.77,
+    "total_debt": 263763949.14,
+    "enterprise_value": 3221094214.059087
+  },
+  "ttm": {
+    "revenue": 4403151467.23,
+    "net_income": 133762805.22999999,
+    "diluted_eps": null,
+    "free_cash_flow": 31780413.720000014,
+    "operating_cash_flow": null,
+    "capital_expenditure": null,
+    "revenue_per_share": 30.68398235003484,
+    "free_cash_flow_per_share": 0.22146629770034854,
+    "net_margin": 0.030378878906509546,
+    "cash_conversion": 0.23758782320208385
+  },
+  "valuation_bases": {
+    "revenue": {
+      "value": 4403151467.23,
+      "period": "ttm",
+      "per_share": 30.68398235003484
+    },
+    "earnings": {
+      "value": 133762805.22999999,
+      "period": "ttm",
+      "per_share": 0.9321449841811846
+    },
+    "free_cash_flow": {
+      "value": 31780413.720000014,
+      "period": "ttm",
+      "per_share": 0.22146629770034854
+    }
+  },
+  "annual": [
+    {
+      "fiscal_year": "2025-12-31",
+      "source": "yfinance",
+      "revenue": 3170795556.18,
+      "net_income": 140554623.92,
+      "diluted_eps": 1.24,
+      "diluted_shares": 113350503,
+      "operating_cash_flow": -26438389.98,
+      "capital_expenditure": -24357710.81,
+      "free_cash_flow": -50796100.79,
+      "revenue_per_share": 27.973369965371923,
+      "free_cash_flow_per_share": -0.44813299849229604,
+      "net_margin": 0.04432787337740957,
+      "cash_conversion": -0.361397578915026,
+      "year_end_price": 41.79999923706055,
+      "price_to_earnings": 33.709676804081084,
+      "price_to_fcf": -93.27587876298546
+    }
+  ],
+  "historical_metrics": {
+    "available_growth_windows": {
+      "revenue": [],
+      "earnings": [],
+      "free_cash_flow": []
+    },
+    "growth": {
+      "revenue": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "earnings": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "free_cash_flow": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    },
+    "averages": {
+      "net_margin": {
+        "1y": 0.04432787337740957,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "cash_conversion": {
+        "1y": -0.361397578915026,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_earnings": {
+        "1y": 33.709676804081084,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_fcf": {
+        "1y": -93.27587876298546,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    }
+  },
+  "calculator_contract": {
+    "forward_models": {
+      "revenue_growth": {
+        "base": "valuation_bases.revenue.per_share",
+        "margin": "user_input.net_margin",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "earnings_growth": {
+        "base": "valuation_bases.earnings.per_share",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "fcf_growth": {
+        "base": "valuation_bases.free_cash_flow.per_share",
+        "terminal_multiple": "user_input.terminal_price_to_fcf"
+      }
+    },
+    "common_user_inputs": [
+      "projection_years",
+      "growth_rate",
+      "discount_rate"
+    ],
+    "forward_output": "fair_value_per_share",
+    "reverse_output": "implied_compound_growth_rate"
+  },
+  "data_quality": {
+    "warnings": [
+      "fewer than 5 annual financial periods are available"
+    ]
+  },
+  "price_refreshed_at": "2026-11-14T02:43:33.820725+00:00"
+}

@@ -12,28 +12,28 @@
   "sources": [
     "yfinance"
   ],
-  "fetched_at": "2026-11-01T11:25:08.167931+00:00",
+  "fetched_at": "2026-11-15T12:07:24.866893+00:00",
   "market_data": {
     "as_of": "2026-11-13",
     "price": 2.5,
     "shares_outstanding": 3170181149,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-11-14T02:42:17.925367+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-11-15T12:07:24.866904+00:00",
     "market_cap": 7925452872.5,
-    "cash_and_short_term_investments": 2611124443.96,
-    "total_debt": 1983733380.55,
-    "enterprise_value": 7298061809.089999
+    "cash_and_short_term_investments": 3402681928.46,
+    "total_debt": 1300296822.53,
+    "enterprise_value": 5823067766.570001
   },
   "ttm": {
     "revenue": null,
     "net_income": null,
     "diluted_eps": null,
-    "free_cash_flow": null,
+    "free_cash_flow": -1484143703.6200001,
     "operating_cash_flow": null,
-    "capital_expenditure": null,
+    "capital_expenditure": -2612382678.29,
     "revenue_per_share": null,
-    "free_cash_flow_per_share": null,
+    "free_cash_flow_per_share": -0.4681573808765337,
     "net_margin": null,
     "cash_conversion": null
   },
@@ -41,17 +41,17 @@
     "revenue": {
       "value": 41803578333.95,
       "period": "2024-12-31",
-      "per_share": 13.12917322107171
+      "per_share": 13.186495146227367
     },
     "earnings": {
       "value": 32780683.84,
       "period": "2024-12-31",
-      "per_share": 0.010295369286389973
+      "per_share": 0.01034031883330715
     },
     "free_cash_flow": {
-      "value": 2021343633.51,
-      "period": "2024-12-31",
-      "per_share": 0.6348396898384767
+      "value": -1484143703.6200001,
+      "period": "ttm",
+      "per_share": -0.4681573808765337
     }
   },
   "annual": [
@@ -218,6 +218,5 @@
     "warnings": [
       "fewer than 5 annual financial periods are available"
     ]
-  },
-  "price_refreshed_at": "2026-11-14T02:42:17.925373+00:00"
+  }
 }
