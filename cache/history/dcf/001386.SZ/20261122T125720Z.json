@@ -1,0 +1,161 @@
+{
+  "schema_version": 3,
+  "symbol": "001386.SZ",
+  "name": "MarcoPolo Holdings Co.,Ltd.",
+  "exchange": "SZSE",
+  "currency": "CNY",
+  "market": "CN",
+  "indexes": [
+    "csi500",
+    "csi800",
+    "csi_all"
+  ],
+  "sources": [
+    "yfinance"
+  ],
+  "fetched_at": "2026-11-15T12:21:16.710564+00:00",
+  "market_data": {
+    "as_of": "2026-11-20",
+    "price": 14.510000228881836,
+    "shares_outstanding": 1194920000,
+    "shares_source": "yfinance.fast_info",
+    "shares_kind": "current_shares_outstanding",
+    "shares_refreshed_at": "2026-11-21T03:22:13.436665+00:00",
+    "market_cap": 17338289473.495483,
+    "cash_and_short_term_investments": 3743125212.44,
+    "total_debt": 1421604005.13,
+    "enterprise_value": 15016768266.185484
+  },
+  "ttm": {
+    "revenue": 5913552312.69,
+    "net_income": 862146177.64,
+    "diluted_eps": null,
+    "free_cash_flow": 1058143283.3500001,
+    "operating_cash_flow": null,
+    "capital_expenditure": -228339704.58999997,
+    "revenue_per_share": 4.948910648989053,
+    "free_cash_flow_per_share": 0.8855348335871859,
+    "net_margin": 0.14579158719707355,
+    "cash_conversion": 1.2273362810080697
+  },
+  "valuation_bases": {
+    "revenue": {
+      "value": 5913552312.69,
+      "period": "ttm",
+      "per_share": 4.948910648989053
+    },
+    "earnings": {
+      "value": 862146177.64,
+      "period": "ttm",
+      "per_share": 0.7215095384126133
+    },
+    "free_cash_flow": {
+      "value": 1058143283.3500001,
+      "period": "ttm",
+      "per_share": 0.8855348335871859
+    }
+  },
+  "annual": [
+    {
+      "fiscal_year": "2025-12-31",
+      "source": "yfinance",
+      "revenue": 6457933861.26,
+      "net_income": 1210098180.24,
+      "diluted_eps": 1.1,
+      "diluted_shares": 1100089255,
+      "operating_cash_flow": 2100350787.79,
+      "capital_expenditure": -226684187.92,
+      "free_cash_flow": 1873666599.87,
+      "revenue_per_share": 5.870372637409317,
+      "free_cash_flow_per_share": 1.7031950738124424,
+      "net_margin": 0.1873816310661161,
+      "cash_conversion": 1.5483591583439897,
+      "year_end_price": 22.729999542236328,
+      "price_to_earnings": 20.66363594748757,
+      "price_to_fcf": 13.345505686179186
+    }
+  ],
+  "historical_metrics": {
+    "available_growth_windows": {
+      "revenue": [],
+      "earnings": [],
+      "free_cash_flow": []
+    },
+    "growth": {
+      "revenue": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "earnings": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "free_cash_flow": {
+        "1y": null,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    },
+    "averages": {
+      "net_margin": {
+        "1y": 0.1873816310661161,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "cash_conversion": {
+        "1y": 1.5483591583439897,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_earnings": {
+        "1y": 20.66363594748757,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      },
+      "price_to_fcf": {
+        "1y": 13.345505686179186,
+        "3y": null,
+        "5y": null,
+        "10y": null
+      }
+    }
+  },
+  "calculator_contract": {
+    "forward_models": {
+      "revenue_growth": {
+        "base": "valuation_bases.revenue.per_share",
+        "margin": "user_input.net_margin",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "earnings_growth": {
+        "base": "valuation_bases.earnings.per_share",
+        "terminal_multiple": "user_input.terminal_pe"
+      },
+      "fcf_growth": {
+        "base": "valuation_bases.free_cash_flow.per_share",
+        "terminal_multiple": "user_input.terminal_price_to_fcf"
+      }
+    },
+    "common_user_inputs": [
+      "projection_years",
+      "growth_rate",
+      "discount_rate"
+    ],
+    "forward_output": "fair_value_per_share",
+    "reverse_output": "implied_compound_growth_rate"
+  },
+  "data_quality": {
+    "warnings": [
+      "fewer than 5 annual financial periods are available"
+    ]
+  },
+  "price_refreshed_at": "2026-11-21T03:22:13.436671+00:00"
+}

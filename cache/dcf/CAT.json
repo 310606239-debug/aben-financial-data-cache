@@ -12,14 +12,14 @@
     "sec-edgar",
     "yfinance"
   ],
-  "fetched_at": "2026-11-15T12:26:02.552311+00:00",
+  "fetched_at": "2026-11-22T13:01:11.552720+00:00",
   "market_data": {
     "as_of": "2026-11-20",
     "price": 510.45001220703125,
     "shares_outstanding": 457594174,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-11-21T03:29:48.002496+00:00",
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-11-22T13:00:57.393874+00:00",
     "market_cap": 233578951704.16638,
     "cash_and_short_term_investments": 7929000000,
     "total_debt": 45201000000,
@@ -28,7 +28,7 @@
   "ttm": {
     "revenue": 77773000000,
     "net_income": 11831000000,
-    "diluted_eps": null,
+    "diluted_eps": 25.49,
     "free_cash_flow": 9616000000,
     "operating_cash_flow": 14184000000,
     "capital_expenditure": -4568000000,
@@ -46,7 +46,7 @@
     "earnings": {
       "value": 11831000000,
       "period": "ttm",
-      "per_share": 25.854787215887935
+      "per_share": 25.49
     },
     "free_cash_flow": {
       "value": 9616000000,
@@ -451,6 +451,5 @@
   },
   "data_quality": {
     "warnings": []
-  },
-  "price_refreshed_at": "2026-11-21T03:29:48.002502+00:00"
+  }
 }

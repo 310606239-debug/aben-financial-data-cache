@@ -12,28 +12,28 @@
     "sec-edgar",
     "yfinance"
   ],
-  "fetched_at": "2026-11-15T12:18:14.730330+00:00",
+  "fetched_at": "2026-11-22T12:54:15.335215+00:00",
   "market_data": {
     "as_of": "2026-11-20",
     "price": 73.63999938964844,
-    "shares_outstanding": 183125078,
-    "shares_source": "yfinance.fast_info",
-    "shares_kind": "current_shares_outstanding",
-    "shares_refreshed_at": "2026-11-21T03:30:30.515954+00:00",
-    "market_cap": 13485330632.149323,
+    "shares_outstanding": 183117863,
+    "shares_source": "yfinance.balance_sheet",
+    "shares_kind": "ordinary_shares_or_latest_diluted_average_shares",
+    "shares_refreshed_at": "2026-11-22T12:54:11.315152+00:00",
+    "market_cap": 13484799319.553726,
     "cash_and_short_term_investments": 134929000,
     "total_debt": 5465317000,
-    "enterprise_value": 18815718632.149323
+    "enterprise_value": 18815187319.553726
   },
   "ttm": {
     "revenue": null,
     "net_income": null,
     "diluted_eps": 2.788385,
-    "free_cash_flow": null,
+    "free_cash_flow": 819390000,
     "operating_cash_flow": 819390000,
     "capital_expenditure": null,
     "revenue_per_share": null,
-    "free_cash_flow_per_share": null,
+    "free_cash_flow_per_share": 4.474659034219944,
     "net_margin": null,
     "cash_conversion": null
   },
@@ -49,9 +49,9 @@
       "per_share": 2.8804399055268575
     },
     "free_cash_flow": {
-      "value": 827692000,
-      "period": "2025-12-31",
-      "per_share": 4.51999595473654
+      "value": 819390000,
+      "period": "ttm",
+      "per_share": 4.474659034219944
     }
   },
   "annual": [
@@ -386,6 +386,5 @@
   },
   "data_quality": {
     "warnings": []
-  },
-  "price_refreshed_at": "2026-11-21T03:30:30.515960+00:00"
+  }
 }
